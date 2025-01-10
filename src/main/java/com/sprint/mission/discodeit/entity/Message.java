@@ -38,7 +38,6 @@ public class Message implements Serializable {
         this.id = id;
         this.createdAt = Instant.now();
         this.updatedAt = Instant.now();
-
         this.content = content;
         this.senderId = senderId;
         this.channelId = channelId;

@@ -30,7 +30,6 @@ public class Channel implements Serializable {
         this.id = UUID.randomUUID();
         this.createAt = Instant.now();
         this.updateAt = createAt;
-
         this.channelName = channelName;
         this.description = description;
         this.group = group;
