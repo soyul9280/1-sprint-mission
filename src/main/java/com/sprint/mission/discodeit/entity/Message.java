@@ -31,7 +31,14 @@ public class Message implements Serializable {
         this.content = content;
         this.senderId = senderId;
         this.channelId = channelId;
+<<<<<<< HEAD
         this.messageFiles = messageFiles;
+=======
+    }
+
+    public String getContent() {
+        return content;
+>>>>>>> ca3d883 (After mentoring0116)
     }
 
    /* public Message(UUID id,String content, UUID senderId, UUID channelId, List<UUID> messageFiles) {
