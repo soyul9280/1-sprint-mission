@@ -65,7 +65,6 @@ public class BasicUserStatusService implements UserStatusService {
     public void delete(UUID userStatusId) {
         userStatusRepository.deleteById(userStatusId);
     }
-
     public boolean isUserOnline(UUID userId) {
         if (userStatusRepository.findByUserId(userId).isEmpty()) {
             return false;
