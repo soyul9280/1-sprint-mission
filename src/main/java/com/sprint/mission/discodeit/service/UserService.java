@@ -17,4 +17,5 @@ public interface UserService {
    List<UserResponseDto> findAllUsers();
    User updateUser(UUID id, UserUpdateRequestDto userParam, BinaryContentCreateRequestDto binaryContentCreateRequest);
    void deleteUser(UUID id);
+   void updateuserStatus(UUID userId);
 }

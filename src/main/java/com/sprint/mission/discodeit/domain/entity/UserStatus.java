@@ -1,4 +1,4 @@
-package com.sprint.mission.discodeit.entity;
+package com.sprint.mission.discodeit.domain.entity;
 
 import lombok.Getter;
 
@@ -11,8 +11,10 @@ public class UserStatus{
     private UUID id;
     private Instant createdAt;
     private Instant updatedAt;
+
     private Instant lastAttendAt;
     private UUID userId;
+    private String status;
 
     public UserStatus(UUID userId) {
         this.id = UUID.randomUUID();

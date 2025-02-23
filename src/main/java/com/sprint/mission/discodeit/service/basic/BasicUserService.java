@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -126,6 +127,11 @@ public class BasicUserService implements UserService {
 
     private boolean isUserOnline(UUID userId) {
         UserStatus userStatus = userStatusRepository.findByUserId(userId).orElseThrow(() -> new IllegalArgumentException("해당 유저상태가 존재하지 않습니다."));
+        return userStatus.isOnline();
+    }
+
+    private boolean isUserOnline(UUID userId) {
+        UserStatus userStatus = userStatusRepository.findByUserId(userId).orElseThrow(() -> new IllegalArgumentException("해당 유저가 존재하지 않습니다."));
         return userStatus.isOnline();
     }
 }

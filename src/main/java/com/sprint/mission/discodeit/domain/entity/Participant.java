@@ -1,7 +1,6 @@
-package com.sprint.mission.discodeit.entity;
+package com.sprint.mission.discodeit.domain.entity;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,11 +8,10 @@ import lombok.Setter;
 import java.util.UUID;
 
 @Getter
+@Setter
 public class Participant{
     private UUID id;
     private User user;
-
-    @JsonBackReference
     private Channel channel;
     private Message message;
 
@@ -21,13 +19,4 @@ public class Participant{
         this.id = UUID.randomUUID();
         this.user = user;
     }
-
-    public void setChannel(Channel channel) {
-        this.channel = channel;
-    }
-
-    public void setMessage(Message message) {
-        this.message = message;
-    }
-
 }

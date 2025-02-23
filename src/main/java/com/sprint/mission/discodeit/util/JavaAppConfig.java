@@ -24,10 +24,9 @@ public class JavaAppConfig {
 //        return new FileUserService(new FileUserRespository());
     }
     public MessageService messageService(){
-        return new BasicMessageService(new JcfMessageRepository(),new JcfBinaryContentRepository());
+        return new BasicMessageService(new JcfMessageRepository(),new JcfUserRepository(),new JcfBinaryContentRepository(),new JcfChannelRepository());
     }
     public ChannelService channelService(){
-
         return new BasicChannelService(new JcfChannelRepository(), new JcfUserRepository(), new JcfMessageRepository(),new JcfReadStatusRepository());
     }
     public BinaryContentService binaryContentService(){

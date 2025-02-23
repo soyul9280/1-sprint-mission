@@ -1,5 +1,4 @@
 package com.sprint.mission.discodeit.entity;
-
 import lombok.Data;
 
 import java.time.Instant;
@@ -10,7 +9,7 @@ public class ReadStatus{
     private UUID id;
     private Instant createdAt;
     private Instant updatedAt;
-    private UUID userId;
+     private UUID userId;
     private UUID channelId;
     private Instant lastReadAt;
 
