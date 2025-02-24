@@ -9,7 +9,6 @@ import com.sprint.mission.discodeit.dto.response.UserResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.Instant;
 import java.util.Optional;
 
 @Service

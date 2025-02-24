@@ -1,5 +1,4 @@
 package com.sprint.mission.discodeit.service.basic;
-
 import com.sprint.mission.discodeit.dto.request.ChannelUpdateRequestDto;
 import com.sprint.mission.discodeit.dto.request.PrivateChannelCreateRequestDto;
 import com.sprint.mission.discodeit.dto.request.PublicChannelCreateRequestDto;
@@ -18,7 +17,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
