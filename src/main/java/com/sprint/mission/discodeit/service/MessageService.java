@@ -1,5 +1,8 @@
 package com.sprint.mission.discodeit.service;
 
+import com.sprint.mission.discodeit.dto.request.BinaryContentCreateRequestDto;
+import com.sprint.mission.discodeit.dto.request.MessageCreateRequestDto;
+import com.sprint.mission.discodeit.dto.request.MessageUpdateDto;
 import com.sprint.mission.discodeit.entity.BinaryContent;
 import com.sprint.mission.discodeit.entity.Message;
 
@@ -8,11 +11,10 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface MessageService {
-    Message messageSave(UUID id,Message message);
-    Message messageSaveWithContents(UUID senderId,Message message, List<BinaryContent> files);
+    Message messageSave(MessageCreateRequestDto request, List<BinaryContentCreateRequestDto> binaryContents);
     Optional<Message> findMessage(UUID id);
     List<Message> findAllMessages();
-    Optional<Message> findAllByChannelId(UUID channelId);
-    void updateMessage(UUID id,String updateMessage);
+    List<Message> findAllByChannelId(UUID channelId);
+    Message updateMessage(UUID id, MessageUpdateDto messageParam);
     void deleteMessage(UUID id);
 }

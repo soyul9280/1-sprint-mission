@@ -1,15 +1,14 @@
-package com.sprint.mission.discodeit.web.dto;
+package com.sprint.mission.discodeit.dto.request;
 
 import jakarta.validation.constraints.NotEmpty;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
-@AllArgsConstructor
-public class ChannelUpdateDto {
+@NoArgsConstructor
+public class ChannelUpdateRequestDto {
     @NotEmpty
     private String newChannelName;
 
     private String newDescription;
-
 }

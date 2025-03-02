@@ -1,16 +1,16 @@
 package com.sprint.mission.discodeit.repository.jcf;
 
+import com.sprint.mission.discodeit.dto.request.ChannelUpdateRequestDto;
 import com.sprint.mission.discodeit.entity.Channel;
-import com.sprint.mission.discodeit.web.dto.ChannelUpdateDto;
 import com.sprint.mission.discodeit.repository.ChannelRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -30,16 +30,13 @@ public class JcfChannelRepository implements ChannelRepository {
     }
 
     @Override
-    public void updateChannel(UUID id, ChannelUpdateDto channelUpdateDto) {
-        Channel findChannel = data.get(id);
+    public Channel updateChannel(UUID id, ChannelUpdateRequestDto channelUpdateDto) {
+        Channel findChannel = findById(id).orElseThrow(() -> new NoSuchElementException("Channel not found"));
         if (!findChannel.isPublic(findChannel)){
-            log.info("PRIVATE는 채널 수정 불가입니다.");
-            return;
+            throw new IllegalStateException("PRIVATE는 채널 수정 불가입니다");
         }
-        findChannel.setChannelName(channelUpdateDto.getNewChannelName());
-        findChannel.setDescription(channelUpdateDto.getNewDescription());
-        findChannel.setUpdateAt(Instant.now());
-        log.info("PUBLIC 채널 수정완료");
+        findChannel.update(channelUpdateDto.getNewChannelName(), channelUpdateDto.getNewDescription());
+        return createChannel(findChannel);
     }
 
     @Override

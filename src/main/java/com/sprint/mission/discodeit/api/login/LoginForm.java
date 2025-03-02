@@ -1,4 +1,4 @@
-package com.sprint.mission.discodeit.web.login;
+package com.sprint.mission.discodeit.api.login;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;

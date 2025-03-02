@@ -3,7 +3,6 @@ package com.sprint.mission.discodeit.repository.file;
 import com.sprint.mission.discodeit.entity.Channel;
 import com.sprint.mission.discodeit.entity.Participant;
 import com.sprint.mission.discodeit.entity.User;
-import com.sprint.mission.discodeit.web.dto.UserUpdateDto;
 import com.sprint.mission.discodeit.repository.UserRepository;
 
 import java.io.FileInputStream;
@@ -12,7 +11,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,19 +30,6 @@ public class FileUserRespository implements UserRepository{
         save();
         return user;
     }
-
-    @Override
-    public void updateUser(UUID id, UserUpdateDto userParam) {
-        Map<UUID, User> lists = load();
-        User findUser = lists.get(id);
-        findUser.setUserName(userParam.getUserName());
-        findUser.setUserEmail(userParam.getUserEmail());
-        findUser.setLoginId(userParam.getLoginId());
-        findUser.setPassword(userParam.getPassword());
-        findUser.setUpdatedAt(Instant.now());
-        save();
-    }
-
 
     @Override
     public void deleteUser(UUID id) {
@@ -83,6 +68,16 @@ public class FileUserRespository implements UserRepository{
     public List<User> findAll() {
         Map<UUID, User> loadUsers = load();
         return new ArrayList<>(loadUsers.values());
+    }
+
+    @Override
+    public boolean existLoginId(String loginId) {
+        return false;
+    }
+
+    @Override
+    public boolean existUserEmail(String userEmail) {
+        return false;
     }
 
     private void save() {

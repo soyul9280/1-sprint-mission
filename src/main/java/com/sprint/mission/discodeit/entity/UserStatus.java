@@ -14,7 +14,6 @@ public class UserStatus{
 
     private Instant lastAttendAt;
     private UUID userId;
-    private String status;
 
     public UserStatus(UUID userId) {
         this.id = UUID.randomUUID();

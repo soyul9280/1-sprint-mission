@@ -28,12 +28,15 @@ public class FileMessageRepository implements MessageRepository{
         return message;
     }
 
-
     @Override
-    public void updateMessage(UUID id, String content) {
-        data.get(id).updateMessage(content);
+    public Message updateMessage(UUID id, String content) {
+        Map<UUID, Message> load = load();
+        Message message = load.get(id);
+        message.updateMessage(content);
         save();
+        return message;
     }
+
 
     @Override
     public void deleteMessage(UUID id) {
@@ -41,10 +44,6 @@ public class FileMessageRepository implements MessageRepository{
         save();
     }
 
-    @Override
-    public void deleteMessageByChannelId(UUID channelId) {
-
-    }
 
     @Override
     public Optional<Message> findById(UUID id) {
@@ -59,9 +58,16 @@ public class FileMessageRepository implements MessageRepository{
     }
 
     @Override
-    public Optional<Message> findAllByChannelId(UUID channelId) {
-        return Optional.empty();
+    public List<Message> findAllByChannelId(UUID channelId) {
+        Map<UUID, Message> load = load();
+        for (Message value : load.values()) {
+            if (value.getChannelId().equals(channelId)) {
+                return new ArrayList<>(load.values());
+            }
+        }
+        return null;
     }
+
 
     private void save() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {

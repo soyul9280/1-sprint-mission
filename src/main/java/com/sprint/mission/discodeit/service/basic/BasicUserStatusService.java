@@ -1,10 +1,11 @@
 package com.sprint.mission.discodeit.service.basic;
 
 import com.sprint.mission.discodeit.entity.UserStatus;
-import com.sprint.mission.discodeit.web.dto.UserStatusUpdateDto;
+import com.sprint.mission.discodeit.dto.UserStatusUpdateDto;
 import com.sprint.mission.discodeit.repository.UserRepository;
 import com.sprint.mission.discodeit.repository.UserStatusRepository;
 import com.sprint.mission.discodeit.service.UserStatusService;
+import com.sprint.mission.discodeit.dto.request.UserStatusCreateDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -22,14 +23,15 @@ public class BasicUserStatusService implements UserStatusService {
     private final UserRepository userRepository;
 
     @Override
-    public UserStatus create(UserStatus userStatus) {
-        UUID userId = userStatus.getUserId();
+    public UserStatus create(UserStatusCreateDto userStatusCreate) {
+        UUID userId = userStatusCreate.getUserId();
         if (userId == null) {
             throw new IllegalArgumentException("User id가 존재하지 않습니다.");
         }
-        if(userStatusRepository.findByUserId(userId).equals(userStatus)) {
+        if(userStatusRepository.findByUserId(userId).isPresent()) {
             throw new IllegalArgumentException("이미 해당 유저가 존재합니다.");
         }
+        UserStatus userStatus = new UserStatus(userId);
         return userStatusRepository.save(userStatus);
     }
 
@@ -54,7 +56,7 @@ public class BasicUserStatusService implements UserStatusService {
     @Override
     public UserStatus updateByUserId(UUID userId, UserStatusUpdateDto updateUserStatus) {
         Instant newLastAttendAt = updateUserStatus.getNewAttendAt();
-        UserStatus userStatus = userStatusRepository.findByUserId(userId).get();
+        UserStatus userStatus = userStatusRepository.findByUserId(userId).orElseThrow(() -> new IllegalArgumentException("해당 유저 상태가 존재하지 않습니다."));
         userStatus.updateUserStatus(newLastAttendAt);
         return userStatusRepository.save(userStatus);
     }

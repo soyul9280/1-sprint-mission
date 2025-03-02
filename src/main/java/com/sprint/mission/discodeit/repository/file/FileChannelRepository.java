@@ -1,7 +1,7 @@
 package com.sprint.mission.discodeit.repository.file;
 
+import com.sprint.mission.discodeit.dto.request.ChannelUpdateRequestDto;
 import com.sprint.mission.discodeit.entity.Channel;
-import com.sprint.mission.discodeit.web.dto.ChannelUpdateDto;
 import com.sprint.mission.discodeit.repository.ChannelRepository;
 import lombok.extern.slf4j.Slf4j;
 
@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -33,15 +34,25 @@ public class FileChannelRepository implements ChannelRepository {
     }
 
     @Override
-    public void updateChannel(UUID id, ChannelUpdateDto channelUpdateDto) {
-        Channel findChannel = data.get(id);
-        if(findChannel.isPublic(findChannel)) {
-            findChannel.setDescription(channelUpdateDto.getNewDescription());
-            findChannel.setChannelName(channelUpdateDto.getNewChannelName());
-            log.info("PUBLIC 채널 수정완료");
+    public Optional<Channel> findById(UUID id) {
+        Map<UUID, Channel> loadChannels = load();
+        return Optional.ofNullable(loadChannels.get(id));
+    }
+
+    @Override
+    public List<Channel> findAll() {
+        Map<UUID, Channel> loadChannels = load();
+        return new ArrayList<>(loadChannels.values());
+    }
+
+    @Override
+    public Channel updateChannel(UUID id, ChannelUpdateRequestDto channelUpdateDto) {
+        Channel channel = findById(id).orElseThrow(() -> new NoSuchElementException("채널이 존재하지 않습니다."));
+        if (!channel.isPublic(channel)) {
+            throw new IllegalStateException("PRIVATE는 채널 수정 불가입니다");
         }
-        log.info("PRIVATE는 채널 수정 불가입니다.");
-        return;
+        channel.update(channel.getChannelName(), channel.getDescription());
+        return createChannel(channel);
     }
 
     @Override
@@ -51,20 +62,14 @@ public class FileChannelRepository implements ChannelRepository {
     }
 
     @Override
-    public Optional<Channel> findById(UUID id) {
-        Map<UUID, Channel> loadChannels = load();
-        return Optional.ofNullable(loadChannels.get(id));
-    }
-
-    @Override
     public Optional<Channel> findByChannelName(String channelName) {
+        Map<UUID, Channel> load = load();
+        for (Channel value : load.values()) {
+            if (value.getChannelName().equals(channelName)) {
+                return Optional.of(value);
+            }
+        }
         return Optional.empty();
-    }
-
-    @Override
-    public List<Channel> findAll() {
-        Map<UUID, Channel> loadChannels =load();
-        return new ArrayList<>(loadChannels.values());
     }
 
     private void save() {

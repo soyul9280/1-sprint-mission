@@ -1,7 +1,8 @@
 package com.sprint.mission.discodeit.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -10,43 +11,44 @@ import java.util.List;
 import java.util.UUID;
 
 @Getter
-@Setter
 public class Channel implements Serializable {
 
     private UUID id;
     private Instant createAt;
     private Instant updateAt;
-   // @NotEmpty
+
+    @NotEmpty
     private String channelName;
     private String description;
     private ChannelGroup group;
     private Instant lastMessageTime;
 
-    //@OneToMany(mappedBy) 양방향관계 생성
+    @JsonManagedReference
     private List<Participant> participants = new ArrayList<>();
 
     public Channel(String channelName, String description, ChannelGroup group) {
         this.id = UUID.randomUUID();
         this.createAt = Instant.now();
-        this.updateAt = Instant.now();
-
-        this.channelName = channelName;
-        this.description = description;
-        this.group = group;
-    }
-    public Channel(UUID id,String channelName, String description, ChannelGroup group) {
-        this.id = id;
+        this.updateAt = createAt;
 
         this.channelName = channelName;
         this.description = description;
         this.group = group;
     }
 
-    public Channel(UUID id,ChannelGroup group) {
-        this.id = id;
-        this.createAt = Instant.now();
-        this.updateAt = Instant.now();
-        this.group = group;
+    public void update(String newName, String newDescription) {
+        boolean anyValueUpdated = false;
+        if (newName != null && !newName.equals(this.channelName)) {
+            this.channelName = newName;
+            anyValueUpdated = true;
+        }
+        if (newDescription != null && !newDescription.equals(this.description)) {
+            this.description = newDescription;
+            anyValueUpdated = true;
+        }
+        if (anyValueUpdated) {
+            this.updateAt = Instant.now();
+        }
     }
 
     public void addParticipant(Participant participant) {

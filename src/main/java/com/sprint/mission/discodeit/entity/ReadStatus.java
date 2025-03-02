@@ -24,6 +24,7 @@ public class ReadStatus{
         this.channelId = channelId;
         this.lastReadAt = Instant.now();
     }
+
     public void updateRead(Instant newLastReadAt) {
         this.lastReadAt = newLastReadAt;
         this.updatedAt = Instant.now();

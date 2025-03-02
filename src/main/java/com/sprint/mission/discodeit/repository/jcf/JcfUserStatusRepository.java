@@ -54,7 +54,7 @@ public class JcfUserStatusRepository implements UserStatusRepository {
 
     @Override
     public void deleteByUserId(UUID userId) {
-        UserStatus userStatus = findByUserId(userId).get();
+        UserStatus userStatus = findByUserId(userId).orElseThrow(()->new IllegalArgumentException("해당 유저의 상태가 존재하지 않습니다."));
         data.remove(userStatus.getId());
     }
 }

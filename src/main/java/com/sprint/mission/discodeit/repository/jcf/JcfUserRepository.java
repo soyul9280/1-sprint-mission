@@ -3,13 +3,10 @@ package com.sprint.mission.discodeit.repository.jcf;
 import com.sprint.mission.discodeit.entity.Channel;
 import com.sprint.mission.discodeit.entity.Participant;
 import com.sprint.mission.discodeit.entity.User;
-import com.sprint.mission.discodeit.web.dto.UserUpdateDto;
 import com.sprint.mission.discodeit.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +16,6 @@ import java.util.UUID;
 
 @Repository
 @Slf4j
-@RequiredArgsConstructor
 public class JcfUserRepository implements UserRepository {
 
     private static final Map<UUID, User> data = new HashMap<>();
@@ -28,16 +24,6 @@ public class JcfUserRepository implements UserRepository {
     public User createUser(User user) {
         data.put(user.getId(), user);
         return user;
-    }
-
-    @Override
-    public void updateUser(UUID id, UserUpdateDto userParam) {
-        User findUser = data.get(id);
-        findUser.setUserName(userParam.getUserName());
-        findUser.setUserEmail(userParam.getUserEmail());
-        findUser.setLoginId(userParam.getLoginId());
-        findUser.setPassword(userParam.getPassword());
-        findUser.setUpdatedAt(Instant.now());
     }
 
     @Override
@@ -74,5 +60,27 @@ public class JcfUserRepository implements UserRepository {
     @Override
     public List<User> findAll() {
         return new ArrayList<>(data.values());
+    }
+
+    @Override
+    public boolean existLoginId(String loginId) {
+        List<User> all = findAll();
+        for (User findUser : all) {
+            if (findUser.getLoginId().equals(loginId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean existUserEmail(String userEmail) {
+        List<User> all = findAll();
+        for (User findUser : all) {
+            if (findUser.getUserEmail().equals(userEmail)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
