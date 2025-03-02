@@ -1,4 +1,4 @@
-package com.sprint.mission.discodeit.web.dto;
+package com.sprint.mission.discodeit.dto;
 
 import lombok.Getter;
 

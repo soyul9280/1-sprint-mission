@@ -1,6 +1,5 @@
 package com.sprint.mission.discodeit.entity;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 
 import java.io.Serializable;
@@ -15,86 +14,32 @@ public class User implements Serializable {
     private Instant createdAt;
     private Instant updatedAt;
 
-    @NotBlank
     private String userName;
-    @NotBlank
     private String userEmail;
-    @NotBlank
     private transient String password;
-    @NotBlank
     private String loginId;
 
-    private BinaryContent attachProfile;
+    private UUID profileId;
 
 
-    public User(String loginId, String password, String userName, String userEmail) {
+    public User(String loginId, String password, String userName, String userEmail,UUID profileId) {
         this.id=UUID.randomUUID();
         this.createdAt = Instant.now();
+        this.updatedAt = createdAt;
+
+        this.loginId = loginId;
+        this.password = password;
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.profileId = profileId;
+    }
+
+    public void updateUser(String newLoginId, String newPassword, String newUserName, String newUserEmail, UUID newProfileId) {
         this.updatedAt = Instant.now();
-
-        this.loginId = loginId;
-        this.password = password;
-        this.userName = userName;
-        this.userEmail = userEmail;
-    }
-    public User(UUID id,String loginId, String password, String userName, String userEmail) {
-        this.id=id;
-        this.createdAt = Instant.now();
-        this.updatedAt = Instant.now();
-
-        this.loginId = loginId;
-        this.password = password;
-        this.userName = userName;
-        this.userEmail = userEmail;
-    }
-
-    public User(String loginId, String password, String userName, String userEmail,BinaryContent attachProfile) {
-        this.id=UUID.randomUUID();
-        this.createdAt = Instant.now();
-        this.updatedAt = Instant.now();
-
-        this.loginId = loginId;
-        this.password = password;
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.attachProfile = attachProfile;
-    }
-
-    public void setUpdatedAt(Instant updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setLoginId(String loginId) {
-        this.loginId = loginId;
-    }
-
-    public void setAttachProfile(BinaryContent attachProfile) {
-        this.attachProfile = attachProfile;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                ", userName='" + userName + '\'' +
-                ", userEmail='" + userEmail + '\'' +
-                ", password='" + password + '\'' +
-                ", loginId='" + loginId + '\'' +
-                ", attachProfile=" + attachProfile +
-                '}';
+        this.loginId = newLoginId;
+        this.password = newPassword;
+        this.userName = newUserName;
+        this.userEmail = newUserEmail;
+        this.profileId = newProfileId;
     }
 }
