@@ -1,0 +1,27 @@
+package com.sprint.mission.discodeit.service;
+
+import com.sprint.mission.discodeit.entity.User;
+import com.sprint.mission.discodeit.entity.UserStatus;
+import com.sprint.mission.discodeit.repository.UserRepository;
+import com.sprint.mission.discodeit.repository.UserStatusRepository;
+import com.sprint.mission.discodeit.dto.response.UserResponseDto;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
+@Service
+@RequiredArgsConstructor
+public class LoginService {
+    private final UserRepository userRepository;
+    private final UserStatusRepository userStatusRepository;
+
+    public UserResponseDto login(String loginId, String password) {
+        Optional<User> findUserOptional = userRepository.findByloginId(loginId);
+        User user = findUserOptional.filter(u -> u.getPassword().equals(password))
+                .orElseThrow(() -> new IllegalArgumentException("잘못된 비밀번호 입니다."));
+        UserStatus userStatus = userStatusRepository.findByUserId(user.getId()).orElse(new UserStatus(user.getId()));
+        Boolean online = userStatus.isOnline();
+        return new UserResponseDto(user, online);
+    }
+}
