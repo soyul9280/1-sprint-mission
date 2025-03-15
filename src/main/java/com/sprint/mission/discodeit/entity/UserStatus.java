@@ -1,36 +1,46 @@
 package com.sprint.mission.discodeit.entity;
 
+import com.sprint.mission.discodeit.entity.base.BaseUpdatableEntity;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.UUID;
 
+@Entity
 @Getter
-public class UserStatus{
-    private UUID id;
-    private Instant createdAt;
-    private Instant updatedAt;
+@Table(name = "user_statuses")
+public class UserStatus extends BaseUpdatableEntity {
 
-    private Instant lastAttendAt;
-    private UUID userId;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
-    public UserStatus(UUID userId) {
-        this.id = UUID.randomUUID();
-        this.createdAt = Instant.now();
-        this.updatedAt =createdAt;
-        this.userId = userId;
-        this.lastAttendAt = Instant.now();
+    private Instant lastActiveAt;
+
+    public UserStatus() {
+        this.lastActiveAt = Instant.now();
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+        user.setStatus(this);
     }
 
     public void updateUserStatus(Instant newLastAttendAt) {
-        this.lastAttendAt = newLastAttendAt;
-        updatedAt = Instant.now();
+        this.lastActiveAt = newLastAttendAt;
     }
 
     public Boolean isOnline() {
         Instant now = Instant.now();
-        Duration between = Duration.between(lastAttendAt, now);
+        Duration between = Duration.between(lastActiveAt, now);
         return between.toMinutes()<5;
     }
 }

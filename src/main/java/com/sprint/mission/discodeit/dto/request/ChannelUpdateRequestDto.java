@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class ChannelUpdateRequestDto {
-    @NotEmpty
-    private String newChannelName;
+    private String newName;
 
     private String newDescription;
 }

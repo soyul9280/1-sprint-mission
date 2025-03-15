@@ -1,41 +1,27 @@
 package com.sprint.mission.discodeit.entity;
 
+import com.sprint.mission.discodeit.entity.base.BaseEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-import java.io.Serializable;
-import java.time.Instant;
-import java.util.Arrays;
-import java.util.UUID;
-
+@Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-public class BinaryContent implements Serializable {
-    private UUID id;
-    private Instant createAt;
+@ToString(of = {"fileName","size","contentType"})
+@Table(name = "binary_contents")
+public class BinaryContent extends BaseEntity {
 
-    private String uploadFileName;
+    private String fileName;
     private Long size;
     private String contentType;
-    private byte[] bytes;
 
-    public BinaryContent(String uploadFileName, Long size, String contentType, byte[] bytes) {
-        this.id = UUID.randomUUID();
-        this.createAt = Instant.now();
-
-        this.uploadFileName = uploadFileName;
+    public BinaryContent(String fileName, Long size, String contentType) {
+        this.fileName = fileName;
         this.size = size;
         this.contentType = contentType;
-        this.bytes = bytes;
-    }
-
-    @Override
-    public String toString() {
-        return "BinaryContent{" +
-                "id=" + id +
-                ", createAt=" + createAt +
-                ", uploadFileName='" + uploadFileName + '\'' +
-                ", size=" + size +
-                ", contentType='" + contentType + '\'' +
-                ", bytes=" + Arrays.toString(bytes) +
-                '}';
     }
 }

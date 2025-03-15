@@ -1,59 +1,50 @@
 package com.sprint.mission.discodeit.entity;
 
 
+import com.sprint.mission.discodeit.entity.base.BaseUpdatableEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import lombok.AccessLevel;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-import java.io.Serializable;
-import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
+@Entity
 @Getter
-@Setter
-public class Message implements Serializable {
-    private UUID id;
-    private Instant createdAt;
-    private Instant updatedAt;
+@Table(name = "messages")
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@ToString(of = {"content"})
+public class Message extends BaseUpdatableEntity{
 
     private String content;
 
-    private UUID senderId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "channel_id")
+    private Channel channel;
 
-    private UUID channelId;
-    private List<UUID> messageFiles;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "author_id")
+    private User author;
 
-    public Message(String content, UUID senderId, UUID channelId, List<UUID> messageFiles) {
-        this.id = UUID.randomUUID();
-        this.createdAt = Instant.now();
-        this.updatedAt = Instant.now();
+    @OneToMany
+    List<BinaryContent> attachments=new ArrayList<>();
 
+    public Message(String content, Channel channel, User author, List<BinaryContent> attachments) {
         this.content = content;
-        this.senderId = senderId;
-        this.channelId = channelId;
-        this.messageFiles = messageFiles;
+        this.channel = channel;
+        this.author = author;
+        this.attachments = attachments;
     }
 
-   /* public Message(UUID id,String content, UUID senderId, UUID channelId, List<UUID> messageFiles) {
-        this.id = id;
-        this.createdAt = Instant.now();
-        this.updatedAt = Instant.now();
-
-        this.content = content;
-        this.senderId = senderId;
-        this.channelId = channelId;
-        this.messageFiles = messageFiles;
-    }
-*/
-    public void updateMessage(String content) {
-        this.content = content;
-        this.updatedAt = Instant.now();
-    }
-
-    @Override
-    public String toString() {
-        return "Message{" +
-                "content='" + content + '\'' +
-                '}';
+    public void updateMessage(String newContent) {
+        this.content = newContent;
+        changeUpdatedAt();
     }
 }

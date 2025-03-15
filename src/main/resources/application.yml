@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: local
   application:
     name: discodeit
   datasource:
@@ -12,6 +14,10 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+  sql:
+    init:
+      mode: embedded
 
 logging:
   level:

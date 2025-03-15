@@ -10,5 +10,4 @@ public class BinaryContentCreateRequestDto {
     private Long size;
     private String contentType;
     private byte[] bytes;
-
 }
