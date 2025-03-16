@@ -67,7 +67,7 @@ public class UserApiController implements UserApiDocs {
 
     @PatchMapping(value="/{userId}",consumes = {"multipart/form-data"})
     @Override
-    public ResponseEntity<UserDto> update(@PathVariable UUID userId,
+    public ResponseEntity<UserDto> update(@PathVariable("userId") UUID userId,
                                        @RequestPart("userUpdateRequest") @Valid UserUpdateRequestDto updateUserDto,
                                        @RequestPart(value="profile",required = false) MultipartFile profile) {
         BinaryContentCreateRequestDto file = convertToBinaryContent(profile);
@@ -78,14 +78,14 @@ public class UserApiController implements UserApiDocs {
 
     @DeleteMapping("/{userId}")
     @Override
-    public ResponseEntity<Void> delete(@PathVariable UUID userId) {
+    public ResponseEntity<Void> delete(@PathVariable("userId") UUID userId) {
         userService.deleteUser(userId);
         return ResponseEntity.noContent().build();
     }
 
     @PatchMapping("/{userId}/userStatus")
     @Override
-    public ResponseEntity<UserStatusDto> updateUserStatus(@PathVariable UUID userId, @RequestBody @Valid UserStatusUpdateDto request) {
+    public ResponseEntity<UserStatusDto> updateUserStatus(@PathVariable("userId") UUID userId, @RequestBody @Valid UserStatusUpdateDto request) {
         UserStatus userStatus = userStatusService.updateByUserId(userId, request);
         UserStatusDto dto = userStatusMapper.toDto(userStatus);
         return ResponseEntity.status(HttpStatus.OK).body(dto);

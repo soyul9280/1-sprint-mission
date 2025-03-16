@@ -40,7 +40,7 @@ public class BinaryContentApiController implements BinaryContentApiDocs {
 
     @GetMapping("{binaryContentId}")
     @Override
-    public ResponseEntity<BinaryContentDto> getFile(@PathVariable UUID binaryContentId) {
+    public ResponseEntity<BinaryContentDto> getFile(@PathVariable("binaryContentId") UUID binaryContentId) {
         BinaryContent binaryContent = binaryContentService.find(binaryContentId);
         BinaryContentDto dto = binaryContentMapper.toDto(binaryContent);
         return ResponseEntity.ok(dto);
@@ -48,7 +48,7 @@ public class BinaryContentApiController implements BinaryContentApiDocs {
 
     @GetMapping("/{binaryContentId}/download")
     @Override
-    public ResponseEntity<?> download(@PathVariable UUID binaryContentId) {
+    public ResponseEntity<?> download(@PathVariable("binaryContentId") UUID binaryContentId) {
         BinaryContent binaryContent = binaryContentService.find(binaryContentId);
         BinaryContentDto dto = binaryContentMapper.toDto(binaryContent);
         return binaryContentStorage.download(dto);

@@ -58,7 +58,7 @@ public class MessageApiController implements MessageApiDocs {
 
     @PatchMapping("/{messageId}")
     @Override
-    public ResponseEntity<MessageDto> updateMessage(@PathVariable UUID messageId, @RequestBody MessageUpdateDto messageParam) {
+    public ResponseEntity<MessageDto> updateMessage(@PathVariable("messageId") UUID messageId, @RequestBody MessageUpdateDto messageParam) {
         Message message = messageService.updateMessage(messageId, messageParam);
         MessageDto dto = messageMapper.toDto(message);
         return ResponseEntity.status(HttpStatus.OK).body(dto);
@@ -67,7 +67,7 @@ public class MessageApiController implements MessageApiDocs {
 
     @DeleteMapping("/{messageId}")
     @Override
-    public ResponseEntity<Void> deleteMessage(@PathVariable UUID messageId) {
+    public ResponseEntity<Void> deleteMessage(@PathVariable("messageId") UUID messageId) {
         messageService.deleteMessage(messageId);
         return ResponseEntity.noContent().build();
     }

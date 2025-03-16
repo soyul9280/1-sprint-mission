@@ -25,7 +25,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class LocalBinaryContentStorage implements BinaryContentStorage {
 
-    private Path root=Paths.get(System.getProperty("user.dir"));
+    private Path root=Paths.get(System.getProperty("user.dir","discodeFile"));
 
     private Path resolvePath(UUID id) {
         return root.resolve(id.toString());

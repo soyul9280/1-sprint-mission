@@ -32,7 +32,7 @@ public class ReadStatusApiController implements ReadStatusApiDocs {
 
     @GetMapping
     @Override
-    public ResponseEntity<List<ReadStatusDto>> getUserReadStatus(@RequestParam UUID userId) {
+    public ResponseEntity<List<ReadStatusDto>> getUserReadStatus(@RequestParam("userId") UUID userId) {
         List<ReadStatus> findReadStatuses = readStatusService.findAllByUserId(userId);
         List<ReadStatusDto> result = new ArrayList<>();
         for (ReadStatus findReadStatus : findReadStatuses) {
@@ -52,7 +52,7 @@ public class ReadStatusApiController implements ReadStatusApiDocs {
     }
 
     @PatchMapping("/{readStatusId}")
-    public ResponseEntity<ReadStatusDto> updateUserReadStatus(@PathVariable UUID readStatusId, @RequestBody ReadStatusUpdateDto request) {
+    public ResponseEntity<ReadStatusDto> updateUserReadStatus(@PathVariable("readStatusId") UUID readStatusId, @RequestBody ReadStatusUpdateDto request) {
         ReadStatus result = readStatusService.update(readStatusId, request);
         ReadStatusDto readStatusDto = readStatusMapper.toDto(result);
         return ResponseEntity.ok(readStatusDto);

@@ -56,7 +56,7 @@ public class ChannelApiController implements ChannelApiDocs {
 
     @PatchMapping("{channelId}")
     @Override
-    public ResponseEntity<Channel> updateChannel(@PathVariable UUID channelId, @RequestBody ChannelUpdateRequestDto channelParam) {
+    public ResponseEntity<Channel> updateChannel(@PathVariable("channelId") UUID channelId, @RequestBody ChannelUpdateRequestDto channelParam) {
         Channel channel = channelService.updateChannel(channelId, channelParam);
         return ResponseEntity.status(HttpStatus.OK).body(channel);
     }
@@ -64,7 +64,7 @@ public class ChannelApiController implements ChannelApiDocs {
 
     @DeleteMapping("{channelId}")
     @Override
-    public ResponseEntity<Void> deleteChannel(@PathVariable UUID channelId) {
+    public ResponseEntity<Void> deleteChannel(@PathVariable("channelId") UUID channelId) {
         channelService.deleteChannel(channelId);
         return ResponseEntity.noContent().build();
     }
@@ -72,7 +72,7 @@ public class ChannelApiController implements ChannelApiDocs {
 
     @GetMapping
     @Override
-    public ResponseEntity<List<ChannelDto>> findAllByUserId(@RequestParam UUID userId) {
+    public ResponseEntity<List<ChannelDto>> findAllByUserId(@RequestParam("userId") UUID userId) {
         List<Channel> channels = channelService.findAllByUserId(userId);
         List<ChannelDto> channelList = new ArrayList<>();
         for (Channel channel : channels) {
