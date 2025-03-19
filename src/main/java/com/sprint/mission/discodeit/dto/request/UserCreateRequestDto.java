@@ -9,9 +9,9 @@ public class UserCreateRequestDto {
     @NotBlank
     private String loginId;
     @NotBlank
-    private String password;
-    @NotBlank
     private String userName;
     @NotBlank
     private String userEmail;
+    @NotBlank
+    private String password;
 }

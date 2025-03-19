@@ -1,32 +1,44 @@
 package com.sprint.mission.discodeit.entity;
 
-import lombok.Data;
+
+import com.sprint.mission.discodeit.entity.base.BaseUpdatableEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.Instant;
-import java.util.UUID;
 
-@Data
-public class ReadStatus{
-    private UUID id;
-    private Instant createdAt;
-    private Instant updatedAt;
+@Entity
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "read_statuses")
+public class ReadStatus extends BaseUpdatableEntity {
 
-    private UUID userId;
-    private UUID channelId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "channel_id")
+    private Channel channel;
     private Instant lastReadAt;
 
-    public ReadStatus(UUID userId, UUID channelId) {
-        this.id = UUID.randomUUID();
-        this.createdAt = Instant.now();
-        this.updatedAt = createdAt;
+    public ReadStatus(User user, Channel channel, Instant lastReadAt) {
+        this.user = user;
+        this.channel = channel;
+        this.lastReadAt = lastReadAt;
+    }
 
-        this.userId = userId;
-        this.channelId = channelId;
-        this.lastReadAt = Instant.now();
+    public ReadStatus(User user, Channel channel) {
+        this(user, channel, Instant.now());
     }
 
     public void updateRead(Instant newLastReadAt) {
         this.lastReadAt = newLastReadAt;
-        this.updatedAt = Instant.now();
     }
 }
