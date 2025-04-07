@@ -1,9 +1,13 @@
 package com.sprint.mission.discodeit.service.basic;
 
 import com.sprint.mission.discodeit.dto.request.UserUpdateRequestDto;
+import com.sprint.mission.discodeit.dto.response.UserDto;
 import com.sprint.mission.discodeit.entity.BinaryContent;
 import com.sprint.mission.discodeit.entity.User;
 import com.sprint.mission.discodeit.entity.UserStatus;
+import com.sprint.mission.discodeit.exception.user.UserAlreadyExistException;
+import com.sprint.mission.discodeit.exception.user.UserNotFoundException;
+import com.sprint.mission.discodeit.mapper.UserMapper;
 import com.sprint.mission.discodeit.repository.BinaryContentRepository;
 import com.sprint.mission.discodeit.repository.UserRepository;
 import com.sprint.mission.discodeit.repository.UserStatusRepository;
@@ -17,7 +21,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.UUID;
 
 @Slf4j
@@ -28,67 +31,74 @@ public class BasicUserService implements UserService {
     private final UserRepository userRepository;
     private final BinaryContentRepository contentRepository;
     private final BinaryContentStorage binaryContentStorage;
-    private final UserStatusRepository userStatusRepository;
+    private final UserMapper userMapper;
+    private final UserStatusRepository userStatusRepository; //있는 이유? 고민하기
 
     @Override
     @Transactional
-    public User createUser(UserCreateRequestDto userCreateRequest, BinaryContentCreateRequestDto binaryContentCreateRequest) {
-        String loginId = userCreateRequest.getLoginId();
-        String userEmail = userCreateRequest.getUserEmail();
-        validateDuplicateUser(loginId, userEmail);
-        String password = userCreateRequest.getPassword();
+    public UserDto createUser(UserCreateRequestDto userCreateRequest, BinaryContentCreateRequestDto binaryContentCreateRequest) {
         String userName = userCreateRequest.getUserName();
+        String userEmail = userCreateRequest.getUserEmail();
+        validateDuplicateUser(userName, userEmail);
+        String password = userCreateRequest.getPassword();
 
         BinaryContent binaryContent=(binaryContentCreateRequest !=null)?createBinaryContent(binaryContentCreateRequest):null;
-        User user = new User(loginId,  userName, userEmail,password,binaryContent);
-        UserStatus userStatus = new UserStatus();
+        User user = new User(userName, userEmail,password,binaryContent);
         User savedUser = userRepository.save(user);
+        UserStatus userStatus = new UserStatus();
         userStatus.setUser(savedUser);
-        return savedUser;
+        userStatusRepository.save(userStatus);
+        return userMapper.toDto(savedUser);
     }
 
     @Override
-    public User findUser(UUID id) {
-        return userRepository.findById(id).orElseThrow(()->new IllegalArgumentException("해당 사용자가 존재하지 않습니다."));
+    public UserDto findUser(UUID id) {
+        User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+        return userMapper.toDto(user);
+
     }
 
     @Override
-    public User findByLoginId(String loginId) {
-        return userRepository.findOptionalUserByLoginId(loginId).orElseThrow(()->new IllegalArgumentException("해당 사용자가 존재하지 않습니다."));
+    public UserDto findByUsername(String username) {
+        User user = userRepository.findUserByUsername(username).orElseThrow(() -> new UserNotFoundException(username));
+        return userMapper.toDto(user);
     }
 
     @Override
-    public List<User> findAllUsers() {
-        return userRepository.findAll();
+    public List<UserDto> findAllUsers() {
+        return userRepository.findAll().stream()
+                .map(userMapper::toDto)
+                .toList();
     }
 
     @Override
     @Transactional
-    public User updateUser(UUID id, UserUpdateRequestDto userParam, BinaryContentCreateRequestDto binaryContentCreateRequest) {
-        User user = userRepository.findById(id).orElseThrow(() -> new NoSuchElementException("해당 유저가 존재하지 않습니다."));
-        String newLoginId = userParam.getLoginId();
-        String newUserEmail = userParam.getUserEmail();
-        validateDuplicateUser(newLoginId, newUserEmail);
-        String newPassword = userParam.getPassword();
+    public UserDto updateUser(UUID id, UserUpdateRequestDto userParam, BinaryContentCreateRequestDto binaryContentCreateRequest) {
+        User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
         String newUserName = userParam.getUserName();
+        String newUserEmail = userParam.getUserEmail();
+        validateDuplicateUser(newUserName, newUserEmail);
+        String newPassword = userParam.getPassword();
         BinaryContent binaryContent=(binaryContentCreateRequest !=null)?createBinaryContent(binaryContentCreateRequest):null;
-        user.updateUser(newLoginId,newPassword,newUserName,newUserEmail,binaryContent);
-        return user;
+        user.updateUser(newUserName,newPassword,newUserEmail,binaryContent);
+        return userMapper.toDto(user);
     }
 
     @Transactional
     @Override
-    public void deleteUser(UUID userId) {
-        User user = userRepository.findById(userId).orElseThrow(() -> new IllegalArgumentException("해당 ID의 사용자를 찾을 수 없습니다."));
+    public void deleteUser(UUID id) {
+        User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
         userRepository.deleteById(user.getId());
     }
 
-    private void validateDuplicateUser(String loginId, String userEmail) {
-        if (userRepository.existsByLoginId(loginId)) {
-            throw new IllegalArgumentException("중복된 아이디입니다.");
+    private void validateDuplicateUser(String username, String userEmail) {
+        if (userRepository.existsByUsername(username)) {
+            log.error("중복된 이름입니다. {}", username);
+            throw new UserAlreadyExistException(username);
         }
         if (userRepository.existsByEmail(userEmail)) {
-            throw new IllegalArgumentException("중복된 이메일 입니다.");
+            log.error("중복된 이메일입니다. {}", userEmail);
+            throw new UserAlreadyExistException(userEmail);
         }
     }
 
@@ -102,10 +112,5 @@ public class BasicUserService implements UserService {
         BinaryContent savedContent = contentRepository.save(binaryContent);
         binaryContentStorage.put(savedContent.getId(),bytes);
         return savedContent;
-    }
-
-    private boolean isUserOnline(UUID userId) {
-        UserStatus userStatus = userStatusRepository.findByUserId(userId).orElseThrow(() -> new IllegalArgumentException("해당 유저상태가 존재하지 않습니다."));
-        return userStatus.isOnline();
     }
 }

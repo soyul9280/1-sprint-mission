@@ -10,12 +10,9 @@ import java.util.UUID;
 
 public interface UserRepository extends JpaRepository<User, UUID> {
 
-    @Query("select u from User u where u.loginId=:loginId")
-    User findUserByLoginId(@Param("loginId") String loginId);
+    Optional<User> findUserByUsername(String username);
 
-    Optional<User> findOptionalUserByLoginId(String loginId);
-
-    boolean existsByLoginId(String loginId);
+    boolean existsByUsername(String username);
 
     boolean existsByEmail(String email);
 }

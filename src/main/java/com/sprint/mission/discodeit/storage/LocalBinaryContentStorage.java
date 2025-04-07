@@ -1,17 +1,17 @@
 package com.sprint.mission.discodeit.storage;
 
 import com.sprint.mission.discodeit.dto.response.BinaryContentDto;
+import com.sprint.mission.discodeit.exception.file.FileNotFoundException;
+import com.sprint.mission.discodeit.exception.file.FileRunException;
 import jakarta.annotation.PostConstruct;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.FileAlreadyExistsException;
@@ -33,14 +33,16 @@ public class LocalBinaryContentStorage implements BinaryContentStorage {
 
     @PostConstruct
     public void init() {
-        if(!Files.exists(root)) {
-            try {
+        try{
+            if(!Files.exists(root)) {
                 Files.createDirectories(root);
-            } catch (IOException e) {
-                throw new RuntimeException("폴더 초기화 실패",e);
             }
+            log.info("저장소 폴더 초기화 완료: {}", root.toAbsolutePath());
+            }catch (IOException e) {
+            throw new RuntimeException("폴더 초기화 실패", e);
         }
     }
+
 
     @Override
     public UUID put(UUID id, byte[] data) {
@@ -80,7 +82,18 @@ public class LocalBinaryContentStorage implements BinaryContentStorage {
                     .header(HttpHeaders.CONTENT_DISPOSITION,"attachment; filename=\""+binaryContentDto.getFileName()+"\"")
                     .body(resource);
         }catch (IOException e){
-            throw new RuntimeException("파일 다운로드를 실패하였습니다.", e);
+            throw new FileNotFoundException(binaryContentDto.getId());
+        }
+    }
+
+    public void delete(UUID id) {
+        Path filePath=resolvePath(id);
+        try{
+            if(Files.exists(filePath)){
+                Files.delete(filePath);
+            }
+        }catch (IOException e){
+            throw new FileRunException(id);
         }
     }
 

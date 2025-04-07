@@ -3,10 +3,17 @@ package com.sprint.mission.discodeit.service.basic;
 import com.sprint.mission.discodeit.dto.request.BinaryContentCreateRequestDto;
 import com.sprint.mission.discodeit.dto.request.MessageCreateRequestDto;
 import com.sprint.mission.discodeit.dto.request.MessageUpdateDto;
+import com.sprint.mission.discodeit.dto.response.MessageDto;
+import com.sprint.mission.discodeit.dto.response.PageResponse;
 import com.sprint.mission.discodeit.entity.BinaryContent;
 import com.sprint.mission.discodeit.entity.Channel;
 import com.sprint.mission.discodeit.entity.Message;
 import com.sprint.mission.discodeit.entity.User;
+import com.sprint.mission.discodeit.exception.channel.ChannelNotFoundException;
+import com.sprint.mission.discodeit.exception.message.MessageNotFoundException;
+import com.sprint.mission.discodeit.exception.user.UserNotFoundException;
+import com.sprint.mission.discodeit.mapper.MessageMapper;
+import com.sprint.mission.discodeit.mapper.PageResponseMapper;
 import com.sprint.mission.discodeit.repository.BinaryContentRepository;
 import com.sprint.mission.discodeit.repository.ChannelRepository;
 import com.sprint.mission.discodeit.repository.MessageRepository;
@@ -18,14 +25,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
+import org.springframework.data.domain.SliceImpl;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+
 import java.util.UUID;
 
 
@@ -39,16 +46,15 @@ public class BasicMessageService implements MessageService {
     private final BinaryContentStorage binaryContentStorage;
     private final UserRepository userRepository;
     private final ChannelRepository channelRepository;
+    private final MessageMapper messageMapper;
+    private final PageResponseMapper pageResponseMapper;
 
     @Override
     @Transactional
-    public Message messageSave(MessageCreateRequestDto request, List<BinaryContentCreateRequestDto> binaryContents) {
-        Channel channel = channelRepository.findById(request.getChannelId()).orElseThrow(() -> new NoSuchElementException("해당 채널이 존재하지 않습니다."));
-        User user = userRepository.findById(request.getSenderId()).orElseThrow(() -> new NoSuchElementException("해당 유저가 존재하지 않습니다."));
+    public MessageDto messageSave(MessageCreateRequestDto request, List<BinaryContentCreateRequestDto> binaryContents) {
+        Channel channel = channelRepository.findById(request.getChannelId()).orElseThrow(() -> new ChannelNotFoundException(request.getChannelId()));
+        User user = userRepository.findById(request.getSenderId()).orElseThrow(() -> new UserNotFoundException(request.getSenderId()));
         String content=request.getContent();
-        if (request.getContent().trim().isEmpty()) {
-            throw new IllegalArgumentException("메세지 내용을 입력해주세요.");
-        }
         List<BinaryContent> attachments = new ArrayList<>();
         for (BinaryContentCreateRequestDto binaryContentrequest : binaryContents) {
             if (binaryContentrequest != null) {
@@ -63,42 +69,42 @@ public class BasicMessageService implements MessageService {
                 attachments.add(savedFile);
             }
         }
-        return  messageRepository.save(new Message(content, channel, user,attachments));
+        Message message = new Message(content, channel, user, attachments);
+        messageRepository.save(message);
+        return messageMapper.toDto(message);
+    }
+
+
+    @Override
+    public MessageDto findMessageById(UUID id) {
+        Message message = messageRepository.findById(id).orElseThrow(() -> new MessageNotFoundException(id));
+        return messageMapper.toDto(message);
     }
 
     @Override
-    public Optional<Message> findMessage(UUID id) {
-        return messageRepository.findById(id);
-    }
-
-    @Override
-    public List<Message> findAllMessages() {
-        return messageRepository.findAll();
-    }
-
-    @Override
-    public Slice<Message> findAllByChannelId(UUID channelId, int page) {
+    public PageResponse<MessageDto> findAllByChannelId(UUID channelId, int page) {
         Pageable pageable = PageRequest.of(page, 50, Sort.by(Sort.Direction.DESC, "createdAt"));
-        return messageRepository.findAllByChannelId(channelId, pageable);
+        Slice<Message> slice = messageRepository.findAllByChannelId(channelId, pageable);
+        List<MessageDto> list = slice.getContent().stream()
+                .map(messageMapper::toDto)
+                .toList();
+        SliceImpl<MessageDto> sliceDto = new SliceImpl<>(list, pageable, slice.hasNext());
+        return pageResponseMapper.fromSlice(sliceDto);
     }
 
     @Override
     @Transactional
-    public Message updateMessage(UUID id, MessageUpdateDto messageParam) {
-        Message message = messageRepository.findById(id).orElseThrow(() -> new NoSuchElementException("해당 메시지가 존재하지 않습니다."));
+    public MessageDto updateMessage(UUID id, MessageUpdateDto messageParam) {
+        Message message = messageRepository.findById(id).orElseThrow(() -> new MessageNotFoundException(id));
         message.updateMessage(messageParam.getNewContent());
-        return message;
+        return messageMapper.toDto(message);
     }
 
 
     @Override
     @Transactional
     public void deleteMessage(UUID id) {
-        Message message = messageRepository.findById(id).orElseThrow(()-> new NoSuchElementException("해당 메시지가 존재하지 않습니다."));
-        List<BinaryContent> messageFiles = message.getAttachments();
-        for (BinaryContent messageFile : messageFiles) {
-            contentRepository.deleteById(messageFile.getId());
-        }
+        messageRepository.findById(id).orElseThrow(()-> new MessageNotFoundException(id));
         messageRepository.deleteById(id);
     }
 }

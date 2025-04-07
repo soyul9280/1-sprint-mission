@@ -4,9 +4,9 @@ import com.sprint.mission.discodeit.dto.response.ChannelDto;
 import com.sprint.mission.discodeit.dto.response.UserDto;
 import com.sprint.mission.discodeit.entity.Channel;
 import com.sprint.mission.discodeit.entity.Message;
-import com.sprint.mission.discodeit.entity.Participant;
-import com.sprint.mission.discodeit.entity.User;
+import com.sprint.mission.discodeit.entity.ReadStatus;
 import com.sprint.mission.discodeit.repository.MessageRepository;
+import com.sprint.mission.discodeit.repository.ReadStatusRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Slice;
@@ -22,6 +22,7 @@ import java.util.List;
 public class ChannelMapper {
     private final MessageRepository messageRepository;
     private final UserMapper userMapper;
+    private final ReadStatusRepository readStatusRepository;
 
     public ChannelDto toDto(Channel channel) {
         if (channel == null) {
@@ -42,11 +43,11 @@ public class ChannelMapper {
         }
         List<UserDto> users=new ArrayList<>();
         if(!channel.isPublic(channel)) {
-            List<Participant> participants = channel.getParticipants();
-            for (Participant participant : participants) {
-                User user = participant.getUser();
-                users.add(userMapper.toDto(user));
-            }
+           readStatusRepository.findAllByChannelIdWithUser(channel.getId())
+                   .stream()
+                   .map(ReadStatus::getUser)
+                   .map(userMapper::toDto)
+                   .forEach(users::add);
         }
         String channelName = channel.getName();
         String description = channel.getDescription();

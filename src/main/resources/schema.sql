@@ -13,7 +13,6 @@ CREATE TABLE IF NOT EXISTS users(
     updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
     username VARCHAR(50) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL ,
-    loginId VARCHAR(50) UNIQUE NOT NULL,
     password VARCHAR(60) NOT NULL ,
     profile_id UUID REFERENCES binary_contents(id) ON DELETE SET NULL
 );
