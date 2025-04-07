@@ -18,11 +18,9 @@ import lombok.ToString;
 @Table(name = "users")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@ToString(of = {"username","email","loginId","password"})
+@ToString(of = {"username","email","password"})
 public class User extends BaseUpdatableEntity{
 
-    @Column(unique = true, nullable = false,length = 50)
-    private String loginId;
     @Column(unique = true, nullable = false,length = 50)
     private String username;
     @Column(unique = true, nullable = false,length = 100)
@@ -37,8 +35,7 @@ public class User extends BaseUpdatableEntity{
     @OneToOne(mappedBy = "user",fetch = FetchType.LAZY,cascade = CascadeType.ALL,orphanRemoval = true)
     private UserStatus status;
 
-    public User(String loginId,String username, String email, String password,  BinaryContent profile) {
-        this.loginId = loginId;
+    public User(String username, String email, String password,  BinaryContent profile) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -49,10 +46,9 @@ public class User extends BaseUpdatableEntity{
         this.status = status;
     }
 
-    public void updateUser(String newLoginId, String newPassword, String newUserName, String newUserEmail, BinaryContent newProfile) {
-        this.loginId = newLoginId;
-        this.password = newPassword;
+    public void updateUser(String newUserName, String newPassword, String newUserEmail, BinaryContent newProfile) {
         this.username = newUserName;
+        this.password = newPassword;
         this.email = newUserEmail;
         this.profile = newProfile;
         changeUpdatedAt();

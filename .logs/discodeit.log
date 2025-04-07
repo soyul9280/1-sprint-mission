@@ -1,0 +1,570 @@
+25-04-07 00:04:23.856 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 84269 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:04:23.860 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:04:23.860 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 00:04:25.342 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 1.914 seconds (process running for 2.67)
+25-04-07 00:05:31.657 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 84296 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:05:31.658 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:05:31.659 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 00:05:33.655 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.482 seconds (process running for 3.251)
+25-04-07 00:07:03.615 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 84316 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:07:03.616 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:07:03.617 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 00:07:05.148 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 1.897 seconds (process running for 2.639)
+25-04-07 00:09:46.188 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 84352 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:09:46.189 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:09:46.190 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 00:09:47.491 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 00:11:18.302 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 84398 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:11:18.303 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:11:18.303 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 00:33:28.456 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 84644 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:33:28.458 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:33:28.459 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 00:33:29.685 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 00:44:10.599 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 84860 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:44:10.600 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:44:10.600 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 00:44:11.797 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 00:44:12.330 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.045 seconds (process running for 2.841)
+25-04-07 00:46:40.350 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 84929 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:46:40.351 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:46:40.351 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 00:46:41.581 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 00:46:41.958 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 1.991 seconds (process running for 3.122)
+25-04-07 00:47:18.504 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Starting ChannelRepositoryTest using Java 17.0.12 with PID 84940 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:47:18.506 [Test worker] DEBUG c.s.m.d.r.ChannelRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:47:18.507 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - The following 1 profile is active: "test"
+25-04-07 00:47:21.189 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 00:47:22.271 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Started ChannelRepositoryTest in 4.265 seconds (process running for 5.449)
+25-04-07 00:47:29.427 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Starting ChannelRepositoryTest using Java 17.0.12 with PID 84948 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:47:29.428 [Test worker] DEBUG c.s.m.d.r.ChannelRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:47:29.429 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - The following 1 profile is active: "test"
+25-04-07 00:47:32.080 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 00:47:33.293 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Started ChannelRepositoryTest in 4.353 seconds (process running for 5.715)
+25-04-07 00:47:40.690 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 84955 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:47:40.691 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:47:40.693 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-07 00:47:44.884 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 00:47:45.925 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 6.009 seconds (process running for 7.761)
+25-04-07 00:47:51.218 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 84961 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:47:51.219 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:47:51.220 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-07 00:47:54.554 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 00:47:55.748 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 5.096 seconds (process running for 6.6)
+25-04-07 00:48:07.119 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 84969 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:48:07.120 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:48:07.121 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-07 00:48:09.916 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 00:48:10.793 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 4.152 seconds (process running for 5.924)
+25-04-07 00:59:36.416 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 85098 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:59:36.417 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:59:36.417 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-07 00:59:38.578 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 00:59:39.404 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 3.367 seconds (process running for 4.303)
+25-04-07 00:59:47.684 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85110 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 00:59:47.685 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 00:59:47.685 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 00:59:48.838 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 00:59:49.211 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 1.86 seconds (process running for 2.859)
+25-04-07 01:01:49.738 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85143 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:01:49.739 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:01:49.740 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:01:50.958 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:01:51.251 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 1.949 seconds (process running for 3.002)
+25-04-07 01:05:15.104 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85179 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:05:15.105 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:05:15.105 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:05:16.340 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:05:16.957 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.264 seconds (process running for 3.453)
+25-04-07 01:13:53.209 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85267 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:13:53.210 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:13:53.211 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:13:54.361 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:13:54.641 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 1.835 seconds (process running for 2.781)
+25-04-07 01:16:40.025 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85317 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:16:40.026 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:16:40.026 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:16:41.343 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:16:41.620 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 1.934 seconds (process running for 3.106)
+25-04-07 01:16:53.241 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85331 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:16:53.241 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:16:53.242 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:16:54.527 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:16:54.832 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 1.966 seconds (process running for 2.93)
+25-04-07 01:17:13.491 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85338 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:17:13.492 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:17:13.492 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:17:15.143 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:17:15.636 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.586 seconds (process running for 3.505)
+25-04-07 01:17:48.421 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85347 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:17:48.422 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:17:48.422 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:17:49.568 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:17:49.839 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 1.768 seconds (process running for 2.638)
+25-04-07 01:25:52.001 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85458 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:25:52.002 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:25:52.003 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:25:53.299 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:25:53.594 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.084 seconds (process running for 3.417)
+25-04-07 01:27:59.859 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85489 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:27:59.861 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:27:59.863 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:28:01.219 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:28:01.575 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.156 seconds (process running for 3.112)
+25-04-07 01:28:09.016 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85503 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:28:09.017 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:28:09.018 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:28:10.424 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:28:10.759 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.217 seconds (process running for 3.374)
+25-04-07 01:30:20.342 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85530 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:30:20.343 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:30:20.344 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:30:21.706 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:30:21.983 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.06 seconds (process running for 2.879)
+25-04-07 01:30:47.903 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85551 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:30:47.904 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:30:47.905 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:30:49.237 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:30:49.559 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.068 seconds (process running for 3.14)
+25-04-07 01:31:33.226 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85564 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:31:33.227 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:31:33.228 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:31:34.361 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:31:34.641 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 1.755 seconds (process running for 2.552)
+25-04-07 01:32:50.084 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85581 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:32:50.086 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:32:50.086 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:32:51.548 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:32:52.008 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.407 seconds (process running for 3.801)
+25-04-07 01:33:22.499 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85596 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:33:22.500 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:33:22.501 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:33:23.736 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:33:24.241 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.079 seconds (process running for 2.961)
+25-04-07 01:33:32.517 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 85604 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:33:32.518 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:33:32.519 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:33:34.087 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:33:34.586 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.677 seconds (process running for 3.745)
+25-04-07 01:45:43.836 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Starting ChannelApiControllerTest using Java 17.0.12 with PID 85861 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:45:43.837 [Test worker] DEBUG c.s.m.d.c.ChannelApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:45:43.838 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:45:45.057 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:45:45.383 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Started ChannelApiControllerTest in 2.012 seconds (process running for 2.899)
+25-04-07 01:46:17.405 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Starting ChannelApiControllerTest using Java 17.0.12 with PID 85889 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:46:17.405 [Test worker] DEBUG c.s.m.d.c.ChannelApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:46:17.406 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:46:18.666 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:46:18.991 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Started ChannelApiControllerTest in 2.046 seconds (process running for 2.998)
+25-04-07 01:46:25.832 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Starting ChannelApiControllerTest using Java 17.0.12 with PID 85918 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:46:25.833 [Test worker] DEBUG c.s.m.d.c.ChannelApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:46:25.834 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:46:27.199 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:46:27.759 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Started ChannelApiControllerTest in 2.317 seconds (process running for 3.9)
+25-04-07 01:46:39.244 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Starting ChannelApiControllerTest using Java 17.0.12 with PID 85933 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:46:39.245 [Test worker] DEBUG c.s.m.d.c.ChannelApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:46:39.245 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:46:40.446 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:46:40.720 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Started ChannelApiControllerTest in 1.906 seconds (process running for 3.059)
+25-04-07 01:46:45.676 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Starting ChannelApiControllerTest using Java 17.0.12 with PID 85943 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:46:45.677 [Test worker] DEBUG c.s.m.d.c.ChannelApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:46:45.677 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:46:46.783 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:46:47.050 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Started ChannelApiControllerTest in 1.726 seconds (process running for 2.803)
+25-04-07 01:46:56.985 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Starting ChannelApiControllerTest using Java 17.0.12 with PID 85952 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:46:56.986 [Test worker] DEBUG c.s.m.d.c.ChannelApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:46:56.987 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:46:58.292 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:46:58.568 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Started ChannelApiControllerTest in 1.927 seconds (process running for 2.794)
+25-04-07 01:47:01.965 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Starting ChannelApiControllerTest using Java 17.0.12 with PID 85960 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:47:01.966 [Test worker] DEBUG c.s.m.d.c.ChannelApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:47:01.966 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:47:03.143 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:47:03.534 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Started ChannelApiControllerTest in 1.874 seconds (process running for 2.715)
+25-04-07 01:47:07.108 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Starting ChannelApiControllerTest using Java 17.0.12 with PID 85966 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:47:07.109 [Test worker] DEBUG c.s.m.d.c.ChannelApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:47:07.110 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:47:08.412 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:47:08.703 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Started ChannelApiControllerTest in 2.064 seconds (process running for 2.9)
+25-04-07 01:47:28.571 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Starting ChannelApiControllerTest using Java 17.0.12 with PID 85977 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 01:47:28.572 [Test worker] DEBUG c.s.m.d.c.ChannelApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 01:47:28.572 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - The following 1 profile is active: "test"
+25-04-07 01:47:29.613 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 01:47:29.940 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Started ChannelApiControllerTest in 1.737 seconds (process running for 2.596)
+25-04-07 02:03:01.647 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Starting MessageApiControllerTest using Java 17.0.12 with PID 86163 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 02:03:01.648 [Test worker] DEBUG c.s.m.d.c.MessageApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 02:03:01.649 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - The following 1 profile is active: "test"
+25-04-07 02:03:02.793 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 02:03:03.069 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Started MessageApiControllerTest in 1.83 seconds (process running for 2.648)
+25-04-07 02:03:19.784 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Starting MessageApiControllerTest using Java 17.0.12 with PID 86181 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 02:03:19.785 [Test worker] DEBUG c.s.m.d.c.MessageApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 02:03:19.786 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - The following 1 profile is active: "test"
+25-04-07 02:03:21.044 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 02:03:21.323 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Started MessageApiControllerTest in 1.901 seconds (process running for 2.726)
+25-04-07 09:57:41.660 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Starting MessageApiControllerTest using Java 17.0.12 with PID 90211 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 09:57:41.661 [Test worker] DEBUG c.s.m.d.c.MessageApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 09:57:41.662 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - The following 1 profile is active: "test"
+25-04-07 09:57:42.869 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 09:57:43.155 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Started MessageApiControllerTest in 1.836 seconds (process running for 2.81)
+25-04-07 09:57:53.642 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Starting MessageApiControllerTest using Java 17.0.12 with PID 90223 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 09:57:53.643 [Test worker] DEBUG c.s.m.d.c.MessageApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 09:57:53.644 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - The following 1 profile is active: "test"
+25-04-07 09:57:55.078 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 09:57:56.747 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Started MessageApiControllerTest in 3.718 seconds (process running for 5.318)
+25-04-07 09:59:29.435 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Starting MessageApiControllerTest using Java 17.0.12 with PID 90257 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 09:59:29.436 [Test worker] DEBUG c.s.m.d.c.MessageApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 09:59:29.436 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - The following 1 profile is active: "test"
+25-04-07 09:59:30.523 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 09:59:30.791 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Started MessageApiControllerTest in 1.878 seconds (process running for 2.925)
+25-04-07 09:59:57.807 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Starting MessageApiControllerTest using Java 17.0.12 with PID 90275 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 09:59:57.809 [Test worker] DEBUG c.s.m.d.c.MessageApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 09:59:57.809 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - The following 1 profile is active: "test"
+25-04-07 09:59:59.137 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 09:59:59.435 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Started MessageApiControllerTest in 2.04 seconds (process running for 3.389)
+25-04-07 10:02:49.824 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Starting MessageApiControllerTest using Java 17.0.12 with PID 90308 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:02:49.825 [Test worker] DEBUG c.s.m.d.c.MessageApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:02:49.826 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - The following 1 profile is active: "test"
+25-04-07 10:02:51.044 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 10:02:51.410 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Started MessageApiControllerTest in 1.999 seconds (process running for 3.171)
+25-04-07 10:11:10.496 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Starting MessageApiControllerTest using Java 17.0.12 with PID 90398 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:11:10.497 [Test worker] DEBUG c.s.m.d.c.MessageApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:11:10.499 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - The following 1 profile is active: "test"
+25-04-07 10:11:11.902 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 10:11:12.271 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Started MessageApiControllerTest in 2.275 seconds (process running for 3.286)
+25-04-07 10:26:56.705 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 90659 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:26:56.705 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:26:56.706 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 10:27:00.335 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 10:27:01.975 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 5.587 seconds (process running for 6.403)
+25-04-07 10:28:39.915 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 90701 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:28:39.916 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:28:39.916 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 10:28:43.969 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 10:28:45.562 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 5.945 seconds (process running for 6.83)
+25-04-07 10:29:03.668 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 90715 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:29:03.668 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:29:03.669 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 10:29:08.235 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 10:29:10.238 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.998 seconds (process running for 7.919)
+25-04-07 10:31:45.306 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 90769 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:31:45.307 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:31:45.307 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 10:31:49.324 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 10:31:50.798 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 5.816 seconds (process running for 6.648)
+25-04-07 10:32:02.655 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 90786 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:32:02.656 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:32:02.657 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 10:32:06.119 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 10:32:07.410 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 5.049 seconds (process running for 6.283)
+25-04-07 10:39:59.938 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 90894 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:39:59.939 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:39:59.940 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 10:40:05.271 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 10:40:07.056 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 7.517 seconds (process running for 8.443)
+25-04-07 10:42:02.841 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 90943 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:42:02.843 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:42:02.845 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 10:42:06.951 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 10:42:08.416 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.266 seconds (process running for 7.811)
+25-04-07 10:46:02.588 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 91080 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:46:02.590 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:46:02.590 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 10:46:07.184 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 10:46:08.954 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.759 seconds (process running for 7.905)
+25-04-07 10:53:42.572 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 91208 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:53:42.574 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:53:42.575 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 10:53:47.113 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 10:53:48.863 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.646 seconds (process running for 7.802)
+25-04-07 10:55:00.698 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 91230 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 10:55:00.699 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 10:55:00.700 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 11:10:35.033 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 91379 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 11:10:35.034 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 11:10:35.035 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 11:15:23.410 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 91432 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 11:15:23.411 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 11:15:23.412 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 11:18:54.115 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 91490 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 11:18:54.116 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 11:18:54.117 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 11:22:34.620 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 91605 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 11:22:34.621 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 11:22:34.622 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 11:29:47.021 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 91688 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 11:29:47.022 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 11:29:47.023 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 11:31:57.148 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 91739 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 11:31:57.149 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 11:31:57.151 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 11:38:46.680 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 91844 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 11:38:46.681 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 11:38:46.681 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 11:38:50.448 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 11:38:52.209 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 5.844 seconds (process running for 6.91)
+25-04-07 11:38:59.483 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 91857 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 11:38:59.484 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 11:38:59.484 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 11:39:04.206 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 11:39:07.729 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 8.637 seconds (process running for 9.575)
+25-04-07 11:50:33.741 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92021 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 11:50:33.742 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 11:50:33.743 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 11:50:38.157 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 11:50:39.667 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.567 seconds (process running for 7.401)
+25-04-07 12:13:27.354 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92250 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:13:27.355 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:13:27.356 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:13:31.765 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:13:33.385 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.438 seconds (process running for 8.115)
+25-04-07 12:16:52.054 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92333 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:16:52.055 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:16:52.056 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:16:56.248 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:16:58.479 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.773 seconds (process running for 7.604)
+25-04-07 12:17:06.842 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92351 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:17:06.843 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:17:06.844 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:17:10.572 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:17:12.304 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 5.81 seconds (process running for 6.728)
+25-04-07 12:33:08.394 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92570 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:33:08.394 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:33:08.395 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:33:12.980 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:33:15.061 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.979 seconds (process running for 7.994)
+25-04-07 12:34:17.510 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92608 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:34:17.512 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:34:17.512 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:34:21.286 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:34:22.954 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 5.785 seconds (process running for 6.854)
+25-04-07 12:39:56.247 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92671 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:39:56.249 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:39:56.250 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:39:59.945 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:40:01.611 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 5.721 seconds (process running for 6.794)
+25-04-07 12:41:35.805 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92722 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:41:35.806 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:41:35.807 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:41:42.245 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:41:45.051 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 9.741 seconds (process running for 11.168)
+25-04-07 12:41:55.747 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92736 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:41:55.748 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:41:55.749 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:41:59.907 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:42:01.700 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.314 seconds (process running for 7.528)
+25-04-07 12:43:02.293 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92769 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:43:02.294 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:43:02.295 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:43:06.303 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:43:07.764 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.027 seconds (process running for 7.211)
+25-04-07 12:43:13.202 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92787 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:43:13.202 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:43:13.203 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:43:16.927 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:43:18.397 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 5.537 seconds (process running for 6.521)
+25-04-07 12:44:42.426 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92825 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:44:42.428 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:44:42.429 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:44:46.246 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:44:48.036 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 5.918 seconds (process running for 6.898)
+25-04-07 12:52:59.098 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 92957 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:52:59.098 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:52:59.099 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:53:02.880 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:53:04.667 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 5.859 seconds (process running for 6.82)
+25-04-07 12:59:25.580 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 93121 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 12:59:25.581 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 12:59:25.582 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 12:59:30.894 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 12:59:33.179 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 7.972 seconds (process running for 9.087)
+25-04-07 13:07:35.746 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 93229 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 13:07:35.747 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 13:07:35.748 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 13:07:42.824 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 13:07:45.607 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 10.41 seconds (process running for 13.524)
+25-04-07 13:08:03.252 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 93258 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 13:08:03.254 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 13:08:03.255 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 13:08:10.611 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 13:08:13.645 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 11.269 seconds (process running for 13.606)
+25-04-07 13:16:22.826 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 93350 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 13:16:22.827 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 13:16:22.828 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 13:16:26.627 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 13:16:28.605 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.198 seconds (process running for 7.676)
+25-04-07 13:43:02.846 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 93663 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 13:43:02.848 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 13:43:02.849 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 13:43:07.023 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 13:43:09.462 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 7.218 seconds (process running for 8.172)
+25-04-07 13:49:35.682 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 93812 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 13:49:35.684 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 13:49:35.685 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 13:49:41.120 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 13:49:45.400 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 10.244 seconds (process running for 12.106)
+25-04-07 13:58:20.165 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 93918 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 13:58:20.166 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 13:58:20.166 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 13:58:24.868 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 13:58:27.071 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 7.328 seconds (process running for 8.298)
+25-04-07 14:08:50.193 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 94014 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 14:08:50.195 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 14:08:50.196 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 14:08:54.027 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 14:08:56.138 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.594 seconds (process running for 7.694)
+25-04-07 14:13:37.954 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 94062 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 14:13:37.955 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 14:13:37.956 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 14:13:42.595 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 14:13:44.567 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 7.219 seconds (process running for 8.714)
+25-04-07 14:22:40.558 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 94263 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 14:22:40.593 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 14:22:40.594 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 14:22:48.344 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 14:22:50.986 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 11.682 seconds (process running for 14.706)
+25-04-07 14:26:18.388 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 94308 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 14:26:18.389 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 14:26:18.390 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 14:26:22.664 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 14:26:24.363 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.307 seconds (process running for 7.116)
+25-04-07 14:27:00.197 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 94324 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 14:27:00.197 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 14:27:00.198 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 14:27:04.571 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 14:27:06.184 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.409 seconds (process running for 7.379)
+25-04-07 14:44:05.600 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 94546 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 14:44:05.608 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 14:44:05.613 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 14:44:11.656 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 14:44:15.294 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 10.152 seconds (process running for 11.393)
+25-04-07 15:33:00.956 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 95158 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 15:33:00.959 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 15:33:00.961 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 15:33:05.459 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 15:33:07.022 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 6.444 seconds (process running for 7.653)
+25-04-07 15:33:22.981 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 95174 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 15:33:22.982 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 15:33:22.983 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 15:33:28.792 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 15:33:31.895 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 9.273 seconds (process running for 10.689)
+25-04-07 15:48:59.719 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 95352 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 15:48:59.721 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 15:48:59.722 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 15:49:07.147 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 15:49:10.536 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 11.782 seconds (process running for 13.002)
+25-04-07 15:54:20.313 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 95417 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 15:54:20.314 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 15:54:20.315 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 15:54:23.899 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 15:54:25.896 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 5.947 seconds (process running for 6.861)
+25-04-07 15:54:33.744 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 95430 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 15:54:33.745 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 15:54:33.745 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 15:54:43.103 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 15:54:47.561 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 14.181 seconds (process running for 15.707)
+25-04-07 16:02:29.678 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 95517 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:02:29.680 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:02:29.681 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 16:02:34.056 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:02:36.222 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 6.894 seconds (process running for 7.951)
+25-04-07 16:09:53.495 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 95590 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:09:53.496 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:09:53.496 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 16:09:57.695 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:09:59.532 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 6.381 seconds (process running for 7.643)
+25-04-07 16:10:21.254 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 95603 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:10:21.256 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:10:21.258 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 16:10:25.953 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:10:27.838 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 6.989 seconds (process running for 7.994)
+25-04-07 16:15:10.203 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 95669 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:15:10.204 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:15:10.205 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 16:15:14.457 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:15:16.611 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 6.714 seconds (process running for 7.7)
+25-04-07 16:15:44.991 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 95701 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:15:44.992 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:15:44.993 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 16:15:52.677 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:15:55.197 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 10.741 seconds (process running for 11.737)
+25-04-07 16:17:13.162 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 95734 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:17:13.163 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:17:13.165 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 16:17:20.725 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:17:22.960 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 10.532 seconds (process running for 12.56)
+25-04-07 16:17:47.719 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 95757 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:17:47.720 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:17:47.721 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 16:17:53.030 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:17:55.724 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 8.513 seconds (process running for 9.63)
+25-04-07 16:19:39.345 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 95846 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:19:39.346 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:19:39.347 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 16:19:45.014 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:19:46.942 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 8.337 seconds (process running for 9.389)
+25-04-07 16:37:05.391 [Test worker] INFO  c.s.m.d.integration.MessageTest - Starting MessageTest using Java 17.0.12 with PID 96031 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:37:05.393 [Test worker] DEBUG c.s.m.d.integration.MessageTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:37:05.393 [Test worker] INFO  c.s.m.d.integration.MessageTest - The following 1 profile is active: "test"
+25-04-07 16:37:11.274 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:37:14.571 [Test worker] INFO  c.s.m.d.integration.MessageTest - Started MessageTest in 9.475 seconds (process running for 10.303)
+25-04-07 16:42:54.663 [Test worker] INFO  c.s.m.d.integration.MessageTest - Starting MessageTest using Java 17.0.12 with PID 96112 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:42:54.664 [Test worker] DEBUG c.s.m.d.integration.MessageTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:42:54.665 [Test worker] INFO  c.s.m.d.integration.MessageTest - The following 1 profile is active: "test"
+25-04-07 16:42:58.835 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:43:00.357 [Test worker] INFO  c.s.m.d.integration.MessageTest - Started MessageTest in 6.022 seconds (process running for 6.816)
+25-04-07 16:45:52.463 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 96217 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:45:52.464 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:45:52.465 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 16:45:58.525 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:46:01.235 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 9.257 seconds (process running for 10.208)
+25-04-07 16:46:12.358 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 96240 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:46:12.364 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:46:12.365 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 16:46:17.756 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:46:19.599 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 7.958 seconds (process running for 10.214)
+25-04-07 16:49:15.106 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 96267 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 16:49:15.107 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 16:49:15.107 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 16:49:18.571 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 16:49:20.927 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 6.12 seconds (process running for 7.094)
+25-04-07 16:49:22.737 [http-nio-auto-1-exec-9] ERROR c.s.m.d.s.basic.BasicUserService - 중복된 이름입니다. user1
+25-04-07 17:03:36.897 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 96434 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 17:03:36.898 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 17:03:36.899 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-07 17:03:43.667 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 17:03:46.417 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 10.126 seconds (process running for 11.652)
+25-04-07 17:04:04.462 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Starting ChannelApiControllerTest using Java 17.0.12 with PID 96451 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 17:04:04.464 [Test worker] DEBUG c.s.m.d.c.ChannelApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 17:04:04.465 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - The following 1 profile is active: "test"
+25-04-07 17:04:06.367 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 17:04:06.756 [Test worker] INFO  c.s.m.d.c.ChannelApiControllerTest - Started ChannelApiControllerTest in 2.971 seconds (process running for 4.845)
+25-04-07 17:04:16.716 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Starting MessageApiControllerTest using Java 17.0.12 with PID 96460 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 17:04:16.718 [Test worker] DEBUG c.s.m.d.c.MessageApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 17:04:16.719 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - The following 1 profile is active: "test"
+25-04-07 17:04:18.568 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 17:04:18.967 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Started MessageApiControllerTest in 2.841 seconds (process running for 5.457)
+25-04-07 17:04:29.570 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 96468 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 17:04:29.572 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 17:04:29.574 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-07 17:04:31.695 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 17:04:32.339 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 4.013 seconds (process running for 6.554)
+25-04-07 17:04:45.762 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Starting ChannelRepositoryTest using Java 17.0.12 with PID 96480 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 17:04:45.763 [Test worker] DEBUG c.s.m.d.r.ChannelRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 17:04:45.765 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - The following 1 profile is active: "test"
+25-04-07 17:04:48.894 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 17:04:49.807 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Started ChannelRepositoryTest in 4.735 seconds (process running for 6.962)
+25-04-07 17:04:58.169 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 96496 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 17:04:58.178 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 17:04:58.179 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-07 17:05:01.085 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 17:05:02.131 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 4.489 seconds (process running for 7.019)
+25-04-07 17:05:12.031 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Starting UserRepositoryTest using Java 17.0.12 with PID 96505 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 17:05:12.032 [Test worker] DEBUG c.s.m.d.r.UserRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 17:05:12.034 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - The following 1 profile is active: "test"
+25-04-07 17:05:15.506 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 17:05:17.142 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Started UserRepositoryTest in 6.417 seconds (process running for 9.323)
+25-04-07 17:12:31.648 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 96666 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-07 17:12:31.649 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-07 17:12:31.650 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-07 17:12:35.484 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-07 17:12:37.147 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 5.837 seconds (process running for 6.878)

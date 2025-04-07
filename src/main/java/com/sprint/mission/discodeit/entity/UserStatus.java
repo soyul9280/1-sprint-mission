@@ -29,6 +29,11 @@ public class UserStatus extends BaseUpdatableEntity {
         this.lastActiveAt = Instant.now();
     }
 
+    public UserStatus(User user, Instant lastActiveAt) {
+        this.user = user;
+        this.lastActiveAt = lastActiveAt;
+    }
+
     public void setUser(User user) {
         this.user = user;
         user.setStatus(this);

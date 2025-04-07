@@ -29,9 +29,6 @@ public class Channel extends BaseUpdatableEntity{
     private String name;
     private String description;
 
-    @OneToMany(mappedBy = "channel",cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Participant> participants = new ArrayList<>();
-
     public Channel(String channelName, String description, ChannelType type) {
         this.name = channelName;
         this.description = description;
@@ -46,11 +43,6 @@ public class Channel extends BaseUpdatableEntity{
             this.description = newDescription;
         }
         changeUpdatedAt();
-    }
-
-    public void addParticipant(Participant participant) {
-        participants.add(participant);
-        participant.setChannel(this);
     }
 
     public boolean isPublic(Channel channel) {

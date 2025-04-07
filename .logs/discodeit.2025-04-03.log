@@ -1,0 +1,77 @@
+25-04-03 10:01:09.036 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Starting UserRepositoryTest using Java 17.0.12 with PID 30928 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 10:01:09.040 [Test worker] DEBUG c.s.m.d.r.UserRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 10:01:09.040 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - The following 1 profile is active: "test"
+25-04-03 10:01:11.761 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Started UserRepositoryTest in 3.053 seconds (process running for 3.814)
+25-04-03 10:44:09.967 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Starting UserRepositoryTest using Java 17.0.12 with PID 31460 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 10:44:09.968 [Test worker] DEBUG c.s.m.d.r.UserRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 10:44:09.969 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - The following 1 profile is active: "test"
+25-04-03 10:44:13.171 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Started UserRepositoryTest in 3.53 seconds (process running for 4.621)
+25-04-03 10:45:43.604 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Starting UserRepositoryTest using Java 17.0.12 with PID 31488 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 10:45:43.605 [Test worker] DEBUG c.s.m.d.r.UserRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 10:45:43.606 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - The following 1 profile is active: "test"
+25-04-03 10:45:46.522 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Started UserRepositoryTest in 3.325 seconds (process running for 4.316)
+25-04-03 10:45:58.836 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Starting UserRepositoryTest using Java 17.0.12 with PID 31504 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 10:45:58.837 [Test worker] DEBUG c.s.m.d.r.UserRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 10:45:58.838 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - The following 1 profile is active: "test"
+25-04-03 10:46:02.806 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Started UserRepositoryTest in 4.516 seconds (process running for 5.526)
+25-04-03 10:46:27.916 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Starting UserRepositoryTest using Java 17.0.12 with PID 31521 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 10:46:27.919 [Test worker] DEBUG c.s.m.d.r.UserRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 10:46:27.921 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - The following 1 profile is active: "test"
+25-04-03 10:46:31.892 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Started UserRepositoryTest in 4.668 seconds (process running for 5.515)
+25-04-03 10:46:56.579 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Starting UserRepositoryTest using Java 17.0.12 with PID 31540 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 10:46:56.579 [Test worker] DEBUG c.s.m.d.r.UserRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 10:46:56.580 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - The following 1 profile is active: "test"
+25-04-03 10:47:00.984 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Started UserRepositoryTest in 4.807 seconds (process running for 6.07)
+25-04-03 10:49:21.323 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Starting UserRepositoryTest using Java 17.0.12 with PID 31597 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 10:49:21.324 [Test worker] DEBUG c.s.m.d.r.UserRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 10:49:21.324 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - The following 1 profile is active: "test"
+25-04-03 10:49:23.905 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Started UserRepositoryTest in 2.913 seconds (process running for 3.812)
+25-04-03 11:46:50.546 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Starting ChannelRepositoryTest using Java 17.0.12 with PID 32224 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 11:46:50.547 [Test worker] DEBUG c.s.m.d.r.ChannelRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 11:46:50.548 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - The following 1 profile is active: "test"
+25-04-03 11:46:53.210 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Started ChannelRepositoryTest in 3.085 seconds (process running for 4.232)
+25-04-03 11:48:13.027 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Starting ChannelRepositoryTest using Java 17.0.12 with PID 32270 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 11:48:13.029 [Test worker] DEBUG c.s.m.d.r.ChannelRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 11:48:13.030 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - The following 1 profile is active: "test"
+25-04-03 11:48:16.208 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Started ChannelRepositoryTest in 3.585 seconds (process running for 4.465)
+25-04-03 11:49:26.215 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Starting ChannelRepositoryTest using Java 17.0.12 with PID 32313 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 11:49:26.215 [Test worker] DEBUG c.s.m.d.r.ChannelRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 11:49:26.216 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - The following 1 profile is active: "test"
+25-04-03 11:49:29.353 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Started ChannelRepositoryTest in 3.55 seconds (process running for 4.885)
+25-04-03 13:47:22.976 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 32923 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 13:47:22.978 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 13:47:22.979 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-03 13:47:26.327 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 3.8 seconds (process running for 5.034)
+25-04-03 13:48:36.102 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 33005 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 13:48:36.103 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 13:48:36.104 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-03 13:48:39.503 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 4.152 seconds (process running for 4.994)
+25-04-03 13:50:10.590 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 33047 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 13:50:10.591 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 13:50:10.591 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-03 13:50:13.520 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 3.29 seconds (process running for 4.143)
+25-04-03 13:53:44.846 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 33097 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 13:53:44.847 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 13:53:44.847 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-03 13:53:47.781 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 3.306 seconds (process running for 4.481)
+25-04-03 13:54:53.886 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 33128 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 13:54:53.887 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 13:54:53.888 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-03 13:54:56.802 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 3.319 seconds (process running for 4.105)
+25-04-03 14:47:03.914 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 33689 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 14:47:03.915 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 14:47:03.917 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-03 14:47:06.713 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 3.49 seconds (process running for 4.417)
+25-04-03 14:49:13.417 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 33766 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 14:49:13.418 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 14:49:13.418 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-03 14:49:16.526 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 3.45 seconds (process running for 4.39)
+25-04-03 16:49:07.869 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 35390 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 16:49:07.870 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 16:49:07.871 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-03 16:51:22.454 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 35441 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 16:51:22.459 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 16:51:22.462 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-03 18:18:59.849 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 39047 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-03 18:18:59.850 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-03 18:18:59.851 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"

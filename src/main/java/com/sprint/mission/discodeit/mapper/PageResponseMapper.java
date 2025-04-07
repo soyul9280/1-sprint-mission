@@ -9,12 +9,10 @@ import java.util.List;
 
 @Component
 public class PageResponseMapper {
-    public <T> PageResponse<T> fromPage(Page<T> page) {
-        return new PageResponse<>(page);
-    }
-    public <T> PageResponse<T> fromSlice(Slice<T> slice, List<T> content) {
+
+    public <T> PageResponse<T> fromSlice(Slice<T> slice) {
         return new PageResponse<>(
-                content,
+                slice.getContent(),
                 slice.getNumber(),
                 slice.getSize(),
                 null,
