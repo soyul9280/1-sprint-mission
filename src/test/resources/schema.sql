@@ -5,7 +5,6 @@ DROP TABLE IF EXISTS channels;
 DROP TABLE IF EXISTS user_statuses;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS binary_contents;
-DROP TYPE IF EXISTS channel_type;
 
 CREATE TABLE binary_contents(
     id UUID PRIMARY KEY,
@@ -27,15 +26,13 @@ CREATE TABLE users (
        ON DELETE SET NULL
 );
 
-CREATE TYPE channel_type AS ENUM ('PUBLIC', 'PRIVATE');
-
 CREATE TABLE channels (
   id UUID PRIMARY KEY,
   created_at TIMESTAMP WITH TIME ZONE NOT NULL,
   updated_at TIMESTAMP WITH TIME ZONE,
   name VARCHAR(100),
   description VARCHAR(500),
-  type channel_type NOT NULL
+  type VARCHAR(10) NOT NULL CHECK (type IN ('PUBLIC', 'PRIVATE'))
 );
 
 CREATE TABLE messages (
