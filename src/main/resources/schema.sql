@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS user_statuses(
 );
 
 CREATE TABLE IF NOT EXISTS messages_attachments(
-    message_id UUID REFERENCES users(id) ON DELETE CASCADE ,
+    message_id UUID REFERENCES messages(id) ON DELETE CASCADE ,
     attachments_id UUID REFERENCES binary_contents(id) ON DELETE CASCADE
 );
 
