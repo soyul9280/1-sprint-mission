@@ -165,8 +165,8 @@ class BasicMessageServiceTest {
         @DisplayName("메세지 수정 성공")
         void UpdateMessageSuccess() {
             //given
-            UUID messageId = UUID.randomUUID();
             Message message = new Message("orginal", channel, sender, null);
+            UUID messageId = message.getId();
             MessageUpdateDto dto = new MessageUpdateDto("updateMessage");
             given(messageRepository.findById(messageId)).willReturn(Optional.of(message));
             when(messageMapper.toDto(any(Message.class))).thenAnswer(i->{
