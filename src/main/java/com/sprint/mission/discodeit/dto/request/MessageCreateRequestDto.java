@@ -20,5 +20,6 @@ public class MessageCreateRequestDto {
 
     @NotNull(message = "채널 ID는 필수입니다.")
     private UUID channelId;
+
     private List<UUID> messageFiles;
 }
