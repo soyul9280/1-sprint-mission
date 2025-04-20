@@ -68,7 +68,7 @@ jobs:
       - name: Register ECS new Task Definition
         id : register-task
         run: |
-          TASK_DEF_ARN=${ aws ecs register-task-definition \
+          TASK_DEF_ARN=$( aws ecs register-task-definition \
           --cli-input-json file://${{ steps.render-task-def.outputs.task-definition }} \
           --query 'taskDefinition.taskDefinitionArn' --output text)
           echo "TASK_DEF_ARN=$TASK_DEF_ARN" >> $GITHUB_ENV
