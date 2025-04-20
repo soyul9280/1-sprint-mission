@@ -1,11 +1,11 @@
 {
   "family": "discodeit-task",
   "networkMode": "bridge",
-  "executionRoleArn": "arn:aws:iam::459858849286:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::515966539276:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "discodeit-app",
-      "image": "public.ecr.aws/c8m5s7c4/discodeit:latest",
+      "image": "public.ecr.aws/e1m8h7g9/discodeit:latest",
       "cpu": 256,
       "memory": 512,
       "memoryReservation": 256,
@@ -20,7 +20,7 @@
       "essential": true,
       "environmentFiles": [
         {
-          "value": "arn:aws:s3:::discodeit-binary-content-storage-lygg/discodeit.env",
+          "value": "arn:aws:s3:::discodeit-binary-content-storage-sydiscodeit/discodeit.env",
           "type": "s3"
         }
       ],
