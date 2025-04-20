@@ -1,5 +1,6 @@
 package com.sprint.mission.discodeit.exception;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -13,10 +14,12 @@ import java.util.stream.Collectors;
 
 
 @RestControllerAdvice
+@Slf4j
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(DiscodeitException.class)
     public ResponseEntity<ErrorResponse> handleDiscodeitException(DiscodeitException e) {
+        log.error("커스텀 예외 발생: cide={},message={}",e.getErrorCode(), e.getMessage());
         int status= mapToStatus(e.getErrorCode());
         ErrorResponse error = new ErrorResponse(
                 e.getErrorCode().toString(),
@@ -30,6 +33,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+        log.error("요청 유효성 검사 실패:{}", e.getMessage());
         Map<String,Object> details= e.getBindingResult().getFieldErrors().stream()
                 .collect(Collectors.toMap(FieldError::getField, FieldError::getDefaultMessage));
         ErrorResponse error = new ErrorResponse(
@@ -44,6 +48,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleException(Exception e) {
+        log.error("예기치 못한 오류 발생:{}", e.getMessage());
         ErrorResponse error = new ErrorResponse(
                 "EXCEPTION_500",
                 "예기치 않은 오류가 발생했습니다.",
@@ -63,6 +68,7 @@ public class GlobalExceptionHandler {
             case MESSAGE_NOT_FOUND:
             case READSTATUS_NOT_FOUND:
             case USER_STATUS_NOT_FOUND:
+            case USER_STATUS_NOT_FOUND_BY_USERID:
                 return HttpStatus.NOT_FOUND.value();
 
             case USER_ALREADY_EXISTS:
@@ -70,6 +76,7 @@ public class GlobalExceptionHandler {
             case READSTATUS_ALREADY_EXISTS:
             case USER_STATUS_ALREADY_EXISTS:
             case CHANNEL_UPDATE_FORBIDDEN:
+            case FILE_NO_RUN:
                 return HttpStatus.BAD_REQUEST.value();
 
             default:

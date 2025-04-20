@@ -49,3 +49,5 @@ bin/
 out
 gen
 !/.gitignore
+
+*.env

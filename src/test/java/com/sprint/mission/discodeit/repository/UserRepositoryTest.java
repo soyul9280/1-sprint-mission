@@ -16,7 +16,6 @@ import static org.assertj.core.api.Assertions.*;
 @DataJpaTest
 @ActiveProfiles("test")
 class UserRepositoryTest {
-
     @PersistenceContext
     EntityManager em;
 
@@ -32,7 +31,7 @@ class UserRepositoryTest {
         //when
         User savedUser = userRepository.save(user);
 
-        //then
+        //then 상태기반 테스트->DB상태 검증
         assertThat(savedUser.getUsername()).isEqualTo("userA");
         assertThat(savedUser.getEmail()).isEqualTo("userA@ex.com");
         assertThat(savedUser.getPassword()).isEqualTo("1234");
@@ -62,7 +61,7 @@ class UserRepositoryTest {
     }
 
     @Test
-    @DisplayName("username 존재여부 실패")
+    @DisplayName("username 존재여부 실패")//비즈니스 시나리오 커버리지 확보
     void existByUsernameFail(){
         //given
         userRepository.save(new User("userA", "userA@ex.com", "1234", null));

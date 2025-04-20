@@ -2,6 +2,7 @@ package com.sprint.mission.discodeit.entity;
 
 
 import com.sprint.mission.discodeit.entity.base.BaseUpdatableEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
@@ -26,6 +27,7 @@ public class ReadStatus extends BaseUpdatableEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "channel_id")
     private Channel channel;
+    @Column(nullable = false)
     private Instant lastReadAt;
 
     public ReadStatus(User user, Channel channel, Instant lastReadAt) {

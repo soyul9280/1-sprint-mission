@@ -10,5 +10,5 @@ import java.time.Instant;
 @AllArgsConstructor
 public class UserStatusUpdateDto {
     @NotNull(message = "새로운 활동 시간은 필수입니다.")
-    private Instant newAttendAt;
+    private Instant newLastActiveAt;
 }

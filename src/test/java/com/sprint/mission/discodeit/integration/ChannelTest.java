@@ -51,7 +51,9 @@ public class ChannelTest {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<String> requestEntity = new HttpEntity<>(json, headers);
+
         ResponseEntity<ChannelDto> response = restTemplate.postForEntity("/api/channels/public", requestEntity, ChannelDto.class);
+
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertNotNull(response.getBody().getId());
         assertEquals("public", response.getBody().getName());

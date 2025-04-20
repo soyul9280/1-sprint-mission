@@ -11,7 +11,9 @@ import com.sprint.mission.discodeit.dto.request.BinaryContentCreateRequestDto;
 import com.sprint.mission.discodeit.dto.request.UserCreateRequestDto;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +31,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/users")
@@ -36,13 +39,15 @@ public class UserApiController implements UserApi {
     private final UserService userService;
     private final UserStatusService userStatusService;
 
-    @PostMapping(consumes = {"multipart/form-data"})
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @Override
     public ResponseEntity<UserDto> createUser(
             @RequestPart("userCreateRequest") @Valid UserCreateRequestDto userCreateRequest,
             @RequestPart(value="profile" ,required = false) MultipartFile profile ) {
+        log.info("사용자 생성 요청: {}", userCreateRequest);
         BinaryContentCreateRequestDto file = convertToBinaryContent(profile);
         UserDto user = userService.createUser(userCreateRequest, file);
+        log.debug("사용자 생성 응답: {}", user);
         return ResponseEntity.status(HttpStatus.CREATED).body(user);
     }
 
@@ -58,8 +63,10 @@ public class UserApiController implements UserApi {
     public ResponseEntity<UserDto> update(@PathVariable("userId") UUID userId,
                                        @RequestPart("userUpdateRequest") @Valid UserUpdateRequestDto updateUserDto,
                                        @RequestPart(value="profile",required = false) MultipartFile profile) {
+        log.info("사용자 수정 요청: id={},request={}", userId, updateUserDto);
         BinaryContentCreateRequestDto file = convertToBinaryContent(profile);
         UserDto user = userService.updateUser(userId, updateUserDto, file);
+        log.debug("사용자 수정 응답: {}", user);
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }
 

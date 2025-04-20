@@ -12,12 +12,12 @@ import lombok.NoArgsConstructor;
 public class UserUpdateRequestDto {
 
     @NotBlank(message = "사용자 이름은 필수입니다.")
-    private String userName;
+    private String newUsername;
 
     @NotBlank(message = "비밀번호는 필수입니다.")
-    private String password;
+    private String newPassword;
 
     @NotBlank(message = "이메일은 필수입니다.")
     @Email(message = "올바른 이메일 형식을 입력해주세요.")
-    private String userEmail;
+    private String newEmail;
 }

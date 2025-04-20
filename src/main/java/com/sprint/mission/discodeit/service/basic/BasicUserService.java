@@ -37,8 +37,9 @@ public class BasicUserService implements UserService {
     @Override
     @Transactional
     public UserDto createUser(UserCreateRequestDto userCreateRequest, BinaryContentCreateRequestDto binaryContentCreateRequest) {
-        String userName = userCreateRequest.getUserName();
-        String userEmail = userCreateRequest.getUserEmail();
+        log.debug("사용자 생성 시작: {}", userCreateRequest);
+        String userName = userCreateRequest.getUsername();
+        String userEmail = userCreateRequest.getEmail();
         validateDuplicateUser(userName, userEmail);
         String password = userCreateRequest.getPassword();
 
@@ -48,47 +49,59 @@ public class BasicUserService implements UserService {
         UserStatus userStatus = new UserStatus();
         userStatus.setUser(savedUser);
         userStatusRepository.save(userStatus);
+        log.info("사용자 생성 완료: id={},username={}",user.getId(),userName);
         return userMapper.toDto(savedUser);
     }
 
     @Override
     public UserDto findUser(UUID id) {
+        log.debug("사용자 조회 시작: id={}", id);
         User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+        log.info("사용자 조회 완료: id={}", id);
         return userMapper.toDto(user);
 
     }
 
     @Override
     public UserDto findByUsername(String username) {
+        log.debug("사용자 이름으로 조회 시작: username{}", username);
         User user = userRepository.findUserByUsername(username).orElseThrow(() -> new UserNotFoundException(username));
+        log.info("사용자 이름으로 조회 완료: id={},username={}",user.getId(),username);
         return userMapper.toDto(user);
     }
 
     @Override
     public List<UserDto> findAllUsers() {
-        return userRepository.findAll().stream()
+        log.debug("모든 사용자 조회 시작");
+        List<UserDto> list = userRepository.findAll().stream()
                 .map(userMapper::toDto)
                 .toList();
+        log.info("모든 사용자 조회 완료: 총 {}명",list.size());
+        return list;
     }
 
     @Override
     @Transactional
     public UserDto updateUser(UUID id, UserUpdateRequestDto userParam, BinaryContentCreateRequestDto binaryContentCreateRequest) {
+        log.debug("사용자 수정 시작: id={},request={}",id,userParam);
         User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
-        String newUserName = userParam.getUserName();
-        String newUserEmail = userParam.getUserEmail();
+        String newUserName = userParam.getNewUsername();
+        String newUserEmail = userParam.getNewEmail();
         validateDuplicateUser(newUserName, newUserEmail);
-        String newPassword = userParam.getPassword();
+        String newPassword = userParam.getNewPassword();
         BinaryContent binaryContent=(binaryContentCreateRequest !=null)?createBinaryContent(binaryContentCreateRequest):null;
         user.updateUser(newUserName,newPassword,newUserEmail,binaryContent);
+        log.info("사용자 수정 완료:id={}", id);
         return userMapper.toDto(user);
     }
 
     @Transactional
     @Override
     public void deleteUser(UUID id) {
+        log.debug("사용자 삭제 시작: id={}", id);
         User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
         userRepository.deleteById(user.getId());
+        log.info("사용자 삭제 완료: id={}", id);
     }
 
     private void validateDuplicateUser(String username, String userEmail) {

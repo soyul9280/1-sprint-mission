@@ -12,8 +12,10 @@ import com.sprint.mission.discodeit.mapper.PageResponseMapper;
 import com.sprint.mission.discodeit.service.MessageService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Slice;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,15 +35,17 @@ import java.util.List;
 import java.util.UUID;
 
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/messages")
 public class MessageApiController implements MessageApi {
     private final MessageService messageService;
 
-    @PostMapping(consumes = {"multipart/form-data"})
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @Override
     public ResponseEntity<MessageDto> createMessage(@Valid @RequestPart("messageCreateRequest")MessageCreateRequestDto request, @RequestPart(value = "attachments", required = false)List<MultipartFile> attachments) {
+        log.info("메시지 생성 요청: request={},attachments={}",request,attachments!=null?attachments:0);
         List<BinaryContentCreateRequestDto> fileRequests = new ArrayList<>();
         if(attachments != null) {
             for (MultipartFile attachment : attachments) {
@@ -57,7 +61,9 @@ public class MessageApiController implements MessageApi {
     @PatchMapping("/{messageId}")
     @Override
     public ResponseEntity<MessageDto> updateMessage(@PathVariable("messageId") UUID messageId, @Valid @RequestBody MessageUpdateDto messageParam) {
+        log.info("메시지 수정 요청: id={},request={}", messageId, messageParam);
         MessageDto result = messageService.updateMessage(messageId, messageParam);
+        log.debug("메시지 수정 응답: {}", result);
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 
@@ -65,7 +71,9 @@ public class MessageApiController implements MessageApi {
     @DeleteMapping("/{messageId}")
     @Override
     public ResponseEntity<Void> deleteMessage(@PathVariable("messageId") UUID messageId) {
+        log.info("메시지 삭제 요청: id={}", messageId);
         messageService.deleteMessage(messageId);
+        log.debug("메시지 삭제 완료");
         return ResponseEntity.noContent().build();
     }
 
@@ -73,7 +81,9 @@ public class MessageApiController implements MessageApi {
     @GetMapping
     @Override
     public ResponseEntity<PageResponse<MessageDto>> findAllByChannelId(@RequestParam("channelId") UUID channelId,@RequestParam(value = "page",defaultValue = "0") int page) {
+        log.info("채널별 메시지 목록 조회 요청: channelId={},page={}", channelId, page);
         PageResponse<MessageDto> result = messageService.findAllByChannelId(channelId, page);
+        log.debug("채널별 메시지 목록 조회 응답: total={}", result.getTotalElements());
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 

@@ -16,7 +16,7 @@ public class MessageCreateRequestDto {
     private String content;
 
     @NotNull(message = "보내는 사람 ID는 필수입니다.")
-    private UUID senderId;
+    private UUID authorId;
 
     @NotNull(message = "채널 ID는 필수입니다.")
     private UUID channelId;

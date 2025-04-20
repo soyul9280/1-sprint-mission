@@ -58,7 +58,6 @@ class BasicUserServiceTest {
         @Test
         @DisplayName("사용자 생성 성공 테스트")
         void SuccessCreateUser() {
-          //given
             UserCreateRequestDto dto = new UserCreateRequestDto("userA", "userA@example.com", "1234");
               BinaryContentCreateRequestDto binaryDto = new BinaryContentCreateRequestDto(
                       "profile.png",
@@ -68,8 +67,8 @@ class BasicUserServiceTest {
               );
             BinaryContent savedBinaryContent = new BinaryContent("profile.png", 1024L, "image/png");
             User user = new User("userA", "userA@example.com", "1234", savedBinaryContent);
-            given(contentRepository.save(any(BinaryContent.class))).willReturn(savedBinaryContent);
 
+            given(contentRepository.save(any(BinaryContent.class))).willReturn(savedBinaryContent);
             given(userRepository.existsByUsername("userA")).willReturn(false);
             given(userRepository.existsByEmail("userA@example.com")).willReturn(false);
 
@@ -137,8 +136,8 @@ class BasicUserServiceTest {
             //when
             UserDto result = userService.updateUser(id, dto, null);
             //then
-            assertThat(result.getUsername()).isEqualTo(dto.getUserName());
-            assertThat(result.getEmail()).isEqualTo(dto.getUserEmail());
+            assertThat(result.getUsername()).isEqualTo(dto.getNewUsername());
+            assertThat(result.getEmail()).isEqualTo(dto.getNewEmail());
         }
 
         @Test

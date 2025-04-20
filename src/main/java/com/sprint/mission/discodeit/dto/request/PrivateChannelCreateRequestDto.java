@@ -14,5 +14,5 @@ public class PrivateChannelCreateRequestDto {
 
     @NotNull(message = "참여 유저 목록은 필수입니다.")
     @Size(min = 1,message = "최소 한명이상의 유저가 필요합니다.")
-    private List<UUID> userIds;
+    private List<UUID> participantIds;
 }

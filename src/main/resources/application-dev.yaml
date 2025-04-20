@@ -1,8 +1,13 @@
+server:
+  port: 8080
+
 spring:
   datasource:
-    url: jdbc:h2:mem:discodeit_dev
-    username: sa
-    password:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
   jpa:
     hibernate:
       ddl-auto: validate
@@ -16,5 +21,24 @@ spring:
 
 logging:
   level:
-    root: debug
+    com.sprint.mission.discodeit: debug
     org.hibernate.sql: debug
+    org.hibernate.orm.jdbc.bind: trace
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+
+discodeit:
+  storage:
+    type: ${STORAGE_TYPE:s3}
+    s3:
+      access-key: ${AWS_S3_ACCESS_KEY}
+      secret-key: ${AWS_S3_SECRET_KEY}
+      region: ${AWS_S3_REGION}
+      bucket: ${AWS_S3_BUCKET}
+      presigned-url-expiration: ${AWS_S3_PRESIGNED_URL_EXPIRATION:600}

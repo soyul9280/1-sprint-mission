@@ -37,11 +37,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(UserApiController.class)
 @Import(GlobalExceptionHandler.class)
 @ActiveProfiles("test")
-class UserApiControllerTest {
+class UserApiControllerTest {//api가 잘작동하는지 테스트니까 통합테스트 service기능을 테스트하고싶으면 단위테스트로 뺴라.
     @Autowired
     private MockMvc mockMvc;
     @MockitoBean
-    private UserService userService;
+    private UserService userService; //공유의존성이니까 목,여기서 목 시키려고 인터페이스가 필요한건가?p.289
     @MockitoBean
     private UserStatusService userStatusService;
 

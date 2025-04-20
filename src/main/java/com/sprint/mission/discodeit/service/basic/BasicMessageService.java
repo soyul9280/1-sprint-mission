@@ -52,8 +52,9 @@ public class BasicMessageService implements MessageService {
     @Override
     @Transactional
     public MessageDto messageSave(MessageCreateRequestDto request, List<BinaryContentCreateRequestDto> binaryContents) {
+        log.debug("메시지 생성 시작: reqeust={}", request);
         Channel channel = channelRepository.findById(request.getChannelId()).orElseThrow(() -> new ChannelNotFoundException(request.getChannelId()));
-        User user = userRepository.findById(request.getSenderId()).orElseThrow(() -> new UserNotFoundException(request.getSenderId()));
+        User user = userRepository.findById(request.getAuthorId()).orElseThrow(() -> new UserNotFoundException(request.getAuthorId()));
         String content=request.getContent();
         List<BinaryContent> attachments = new ArrayList<>();
         for (BinaryContentCreateRequestDto binaryContentrequest : binaryContents) {
@@ -71,6 +72,7 @@ public class BasicMessageService implements MessageService {
         }
         Message message = new Message(content, channel, user, attachments);
         messageRepository.save(message);
+        log.info("메시지 생성 완료: id={},channelId={}",message.getId(),channel.getId());
         return messageMapper.toDto(message);
     }
 
@@ -95,8 +97,10 @@ public class BasicMessageService implements MessageService {
     @Override
     @Transactional
     public MessageDto updateMessage(UUID id, MessageUpdateDto messageParam) {
+        log.debug("메시지 수정 시작: id={},request={}",id,messageParam);
         Message message = messageRepository.findById(id).orElseThrow(() -> new MessageNotFoundException(id));
         message.updateMessage(messageParam.getNewContent());
+        log.info("메시지 수정 완료: id={},channelId={}",id,message.getChannel().getId());
         return messageMapper.toDto(message);
     }
 
@@ -104,7 +108,9 @@ public class BasicMessageService implements MessageService {
     @Override
     @Transactional
     public void deleteMessage(UUID id) {
+        log.debug("메시지 삭제 시작: id={}", id);
         messageRepository.findById(id).orElseThrow(()-> new MessageNotFoundException(id));
         messageRepository.deleteById(id);
+        log.info("메시지 삭제 완료: id={}",id);
     }
 }

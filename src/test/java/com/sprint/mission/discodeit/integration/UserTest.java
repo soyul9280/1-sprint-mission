@@ -57,6 +57,7 @@ public class UserTest {
 
         ResponseEntity<UserDto> response = restTemplate.postForEntity("/api/users", requestEntity, UserDto.class);
 
+
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertNotNull(response.getBody().getId());
         assertEquals("andy", response.getBody().getUsername());
@@ -180,6 +181,7 @@ public class UserTest {
         assertTrue(response.getBody().length >= 2); // DB 초기상태 포함
     }
 
+    //테스트 픽스처 -p.91 오브젝트 마더 패턴  팩토리 메서드 이용
     private UUID createTestUser(String username, String email) {
         try {
             MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
