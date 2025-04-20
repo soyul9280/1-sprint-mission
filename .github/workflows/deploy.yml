@@ -59,26 +59,20 @@ jobs:
 
       - name: Task Definition #기존 태스크 정의를JSON으로 갖고오기
         id: task-def
-        run: |
-          aws ecs describe-task-definition \
-            --task-definition $ECS_TASK_DEFINITION \
-            --query taskDefinition \
-            > task-definition.json
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: ecs/task-definition.json
+          container-name: discodeit-app
+          image: ${{ vars.ECR_REPOSITORY_URI }}:${{ github.sha }}
 
-      - name: Update image in task definition
-        id: new-task-def
+      - name: Register ECS new Task Definition
+        id : register-task
         run: |
-          IMAGE="$ECR_REPOSITORY_URI:${{ github.sha }}"
-          jq '.containerDefinitions[0].image = "'$IMAGE'"' task-definition.json > new-task-def.json
+          TASK_DEF_ARN=${ aws ecs register-task-definition \
+          --cli-input-json file://${{ steps.render-task-def.outputs.task-definition }} \
+          --query 'taskDefinition.taskDefinitionArn' --output text)
+          echo "TASK_DEF_ARN=$TASK_DEF_ARN" >> $GITHUB_ENV
 
-      - name: Register new task definition
-        id: register-task-def
-        run: |
-          arn=$(aws ecs register-task-definition \
-            --cli-input-json file://new-task-def.json \
-            --query 'taskDefinition.taskDefinitionArn' \
-            --output text)
-          echo "task_definition_arn=$arn" >> $GITHUB_OUTPUT
 
       - name: Stop ECS service
         run: | 
@@ -93,7 +87,6 @@ jobs:
           aws ecs update-service \
           --cluster ${{ vars.ECS_CLUSTER }} \
           --service ${{ vars.ECS_SERVICE }} \
-          --task-definition ${{ steps.register-task-def.outputs.task_definition_arn }} \
           --force-new-deployment \
           --region ${{ vars.AWS_REGION }}
           
