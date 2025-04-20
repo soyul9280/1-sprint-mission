@@ -23,7 +23,7 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.*;
 
 
-@DataJpaTest
+@DataJpaTest(properties = {"spring.sql.init.mode=never"})
 @ActiveProfiles("test")
 class MessageRepositoryTest {
     @Autowired
