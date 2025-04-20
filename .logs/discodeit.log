@@ -1,0 +1,122 @@
+25-04-20 16:53:16.016 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Starting ChannelRepositoryTest using Java 17.0.12 with PID 14004 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-20 16:53:16.019 [Test worker] DEBUG c.s.m.d.r.ChannelRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-20 16:53:16.019 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - The following 1 profile is active: "test"
+25-04-20 16:53:21.743 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Started ChannelRepositoryTest in 6.347 seconds (process running for 7.995)
+25-04-20 16:53:35.768 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 14045 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-20 16:53:35.769 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-20 16:53:35.769 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-20 16:53:40.980 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 6.249 seconds (process running for 10.498)
+25-04-20 16:53:55.925 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Starting UserRepositoryTest using Java 17.0.12 with PID 14077 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-20 16:53:55.926 [Test worker] DEBUG c.s.m.d.r.UserRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-20 16:53:55.927 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - The following 1 profile is active: "test"
+25-04-20 16:54:00.426 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Started UserRepositoryTest in 5.075 seconds (process running for 6.427)
+25-04-20 16:54:08.493 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Starting ChannelTest using Java 17.0.12 with PID 14088 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-20 16:54:08.495 [Test worker] DEBUG c.s.m.d.integration.ChannelTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-20 16:54:08.496 [Test worker] INFO  c.s.m.d.integration.ChannelTest - The following 1 profile is active: "test"
+25-04-20 16:54:14.338 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-20 16:54:16.751 [Test worker] INFO  c.s.m.d.integration.ChannelTest - Started ChannelTest in 8.962 seconds (process running for 11.598)
+25-04-20 16:54:17.707 [http-nio-auto-1-exec-1] INFO  c.s.m.d.c.ChannelApiController - 채널 삭제 요청: id=47cda2b4-f068-4d95-adf6-ecb65b4dc1a0
+25-04-20 16:54:17.714 [http-nio-auto-1-exec-1] DEBUG c.s.m.d.s.basic.BasicChannelService - 채널 삭제 시작: id=47cda2b4-f068-4d95-adf6-ecb65b4dc1a0
+25-04-20 16:54:17.816 [http-nio-auto-1-exec-1] ERROR c.s.m.d.e.GlobalExceptionHandler - 커스텀 예외 발생: cide=CHANNEL_NOT_FOUND,message=해당 채널을 찾을 수 없습니다.
+25-04-20 16:54:17.984 [http-nio-auto-1-exec-2] INFO  c.s.m.d.c.ChannelApiController - 공개 채널 생성 요청:com.sprint.mission.discodeit.dto.request.PublicChannelCreateRequestDto@16468732
+25-04-20 16:54:17.985 [http-nio-auto-1-exec-2] DEBUG c.s.m.d.s.basic.BasicChannelService - 채널 생성 시작: com.sprint.mission.discodeit.dto.request.PublicChannelCreateRequestDto@16468732
+25-04-20 16:54:18.029 [http-nio-auto-1-exec-2] INFO  c.s.m.d.s.basic.BasicChannelService - 채널 생성 완료: id=acfbd12c-d27c-4e17-9723-48d0eb74db4e, name=public
+25-04-20 16:54:18.164 [http-nio-auto-1-exec-2] DEBUG c.s.m.d.c.ChannelApiController - 공개 채널 생성 응답: com.sprint.mission.discodeit.dto.response.ChannelDto@6ad7f33f
+25-04-20 16:54:18.187 [http-nio-auto-1-exec-3] INFO  c.s.m.d.c.ChannelApiController - 공개 채널 생성 요청:com.sprint.mission.discodeit.dto.request.PublicChannelCreateRequestDto@569c9d72
+25-04-20 16:54:18.188 [http-nio-auto-1-exec-3] DEBUG c.s.m.d.s.basic.BasicChannelService - 채널 생성 시작: com.sprint.mission.discodeit.dto.request.PublicChannelCreateRequestDto@569c9d72
+25-04-20 16:54:18.189 [http-nio-auto-1-exec-3] INFO  c.s.m.d.s.basic.BasicChannelService - 채널 생성 완료: id=c339bd02-fa46-4b3b-81e0-683e4fd33df5, name=channel
+25-04-20 16:54:18.197 [http-nio-auto-1-exec-3] DEBUG c.s.m.d.c.ChannelApiController - 공개 채널 생성 응답: com.sprint.mission.discodeit.dto.response.ChannelDto@5713d91e
+25-04-20 16:54:18.207 [http-nio-auto-1-exec-4] INFO  c.s.m.d.c.ChannelApiController - 채널 수정 요청: id=c339bd02-fa46-4b3b-81e0-683e4fd33df5, request=com.sprint.mission.discodeit.dto.request.ChannelUpdateRequestDto@780de33e
+25-04-20 16:54:18.208 [http-nio-auto-1-exec-4] DEBUG c.s.m.d.s.basic.BasicChannelService - 채널 수정 시작: id=c339bd02-fa46-4b3b-81e0-683e4fd33df5,request=com.sprint.mission.discodeit.dto.request.ChannelUpdateRequestDto@780de33e
+25-04-20 16:54:18.212 [http-nio-auto-1-exec-4] INFO  c.s.m.d.s.basic.BasicChannelService - 채널 수정 완료: id=c339bd02-fa46-4b3b-81e0-683e4fd33df5,name=updateChannel
+25-04-20 16:54:18.229 [http-nio-auto-1-exec-4] DEBUG c.s.m.d.c.ChannelApiController - 채널 수정 응답: com.sprint.mission.discodeit.dto.response.ChannelDto@41a1e2ac
+25-04-20 16:54:18.244 [http-nio-auto-1-exec-5] INFO  c.s.m.d.c.ChannelApiController - 공개 채널 생성 요청:com.sprint.mission.discodeit.dto.request.PublicChannelCreateRequestDto@4d380431
+25-04-20 16:54:18.245 [http-nio-auto-1-exec-5] DEBUG c.s.m.d.s.basic.BasicChannelService - 채널 생성 시작: com.sprint.mission.discodeit.dto.request.PublicChannelCreateRequestDto@4d380431
+25-04-20 16:54:18.246 [http-nio-auto-1-exec-5] INFO  c.s.m.d.s.basic.BasicChannelService - 채널 생성 완료: id=b93131c4-2a76-418c-bda0-d95acb297342, name=channel
+25-04-20 16:54:18.253 [http-nio-auto-1-exec-5] DEBUG c.s.m.d.c.ChannelApiController - 공개 채널 생성 응답: com.sprint.mission.discodeit.dto.response.ChannelDto@7fcf8765
+25-04-20 16:54:18.259 [http-nio-auto-1-exec-6] INFO  c.s.m.d.c.ChannelApiController - 채널 삭제 요청: id=b93131c4-2a76-418c-bda0-d95acb297342
+25-04-20 16:54:18.260 [http-nio-auto-1-exec-6] DEBUG c.s.m.d.s.basic.BasicChannelService - 채널 삭제 시작: id=b93131c4-2a76-418c-bda0-d95acb297342
+25-04-20 16:54:18.278 [http-nio-auto-1-exec-6] INFO  c.s.m.d.s.basic.BasicChannelService - 채널 삭제 완료: id=b93131c4-2a76-418c-bda0-d95acb297342
+25-04-20 16:54:18.282 [http-nio-auto-1-exec-6] DEBUG c.s.m.d.c.ChannelApiController - 채널 삭제 완료
+25-04-20 16:54:18.332 [http-nio-auto-1-exec-7] INFO  c.s.m.d.c.ChannelApiController - 비공개 채널 생성 요청: com.sprint.mission.discodeit.dto.request.PrivateChannelCreateRequestDto@35bb7273
+25-04-20 16:54:18.333 [http-nio-auto-1-exec-7] DEBUG c.s.m.d.s.basic.BasicChannelService - 채널 생성 시작: com.sprint.mission.discodeit.dto.request.PrivateChannelCreateRequestDto@35bb7273
+25-04-20 16:54:18.350 [http-nio-auto-1-exec-7] INFO  c.s.m.d.s.basic.BasicChannelService - 채널 생성 완료: id=cf46b0bc-7098-4c49-b3ae-b49bfd35e55e, name=null
+25-04-20 16:54:18.379 [http-nio-auto-1-exec-7] DEBUG c.s.m.d.c.ChannelApiController - 비공개 채널 생성 응답: com.sprint.mission.discodeit.dto.response.ChannelDto@1314af48
+25-04-20 16:54:18.399 [http-nio-auto-1-exec-8] INFO  c.s.m.d.c.ChannelApiController - 비공개 채널 생성 요청: com.sprint.mission.discodeit.dto.request.PrivateChannelCreateRequestDto@6d25fca7
+25-04-20 16:54:18.400 [http-nio-auto-1-exec-8] DEBUG c.s.m.d.s.basic.BasicChannelService - 채널 생성 시작: com.sprint.mission.discodeit.dto.request.PrivateChannelCreateRequestDto@6d25fca7
+25-04-20 16:54:18.406 [http-nio-auto-1-exec-8] INFO  c.s.m.d.s.basic.BasicChannelService - 채널 생성 완료: id=eab9b8cd-d169-457d-ad42-2f05821a3e34, name=null
+25-04-20 16:54:18.419 [http-nio-auto-1-exec-8] DEBUG c.s.m.d.c.ChannelApiController - 비공개 채널 생성 응답: com.sprint.mission.discodeit.dto.response.ChannelDto@4c8cf963
+25-04-20 16:54:18.429 [http-nio-auto-1-exec-9] INFO  c.s.m.d.c.ChannelApiController - 채널 수정 요청: id=eab9b8cd-d169-457d-ad42-2f05821a3e34, request=com.sprint.mission.discodeit.dto.request.ChannelUpdateRequestDto@3a75b251
+25-04-20 16:54:18.430 [http-nio-auto-1-exec-9] DEBUG c.s.m.d.s.basic.BasicChannelService - 채널 수정 시작: id=eab9b8cd-d169-457d-ad42-2f05821a3e34,request=com.sprint.mission.discodeit.dto.request.ChannelUpdateRequestDto@3a75b251
+25-04-20 16:54:18.434 [http-nio-auto-1-exec-9] ERROR c.s.m.d.e.GlobalExceptionHandler - 커스텀 예외 발생: cide=CHANNEL_UPDATE_FORBIDDEN,message=Private 채널은 수정할 수 없습니다.
+25-04-20 16:54:25.868 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Starting UserTest using Java 17.0.12 with PID 14126 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-20 16:54:25.869 [Test worker] DEBUG c.s.m.discodeit.integration.UserTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-20 16:54:25.870 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - The following 1 profile is active: "test"
+25-04-20 16:54:31.387 [Test worker] INFO  c.s.m.d.s.LocalBinaryContentStorage - 저장소 폴더 초기화 완료: /Users/kangsoyul/springstudy/1-sprint-mission
+25-04-20 16:54:33.422 [Test worker] INFO  c.s.m.discodeit.integration.UserTest - Started UserTest in 8.237 seconds (process running for 10.444)
+25-04-20 16:54:34.232 [http-nio-auto-1-exec-1] INFO  c.s.m.d.controller.UserApiController - 사용자 생성 요청: com.sprint.mission.discodeit.dto.request.UserCreateRequestDto@7ff66bf3
+25-04-20 16:54:34.235 [http-nio-auto-1-exec-1] DEBUG c.s.m.d.s.basic.BasicUserService - 사용자 생성 시작: com.sprint.mission.discodeit.dto.request.UserCreateRequestDto@7ff66bf3
+25-04-20 16:54:34.408 [http-nio-auto-1-exec-1] INFO  c.s.m.d.s.basic.BasicUserService - 사용자 생성 완료: id=ee0a0de3-e2a2-48b9-9a76-b669cbb8d4ae,username=user
+25-04-20 16:54:34.438 [http-nio-auto-1-exec-1] DEBUG c.s.m.d.controller.UserApiController - 사용자 생성 응답: com.sprint.mission.discodeit.dto.response.UserDto@5c527d82
+25-04-20 16:54:34.487 [http-nio-auto-1-exec-2] INFO  c.s.m.d.controller.UserApiController - 사용자 수정 요청: id=ee0a0de3-e2a2-48b9-9a76-b669cbb8d4ae,request=com.sprint.mission.discodeit.dto.request.UserUpdateRequestDto@62c2b49f
+25-04-20 16:54:34.488 [http-nio-auto-1-exec-2] DEBUG c.s.m.d.s.basic.BasicUserService - 사용자 수정 시작: id=ee0a0de3-e2a2-48b9-9a76-b669cbb8d4ae,request=com.sprint.mission.discodeit.dto.request.UserUpdateRequestDto@62c2b49f
+25-04-20 16:54:34.522 [http-nio-auto-1-exec-2] INFO  c.s.m.d.s.basic.BasicUserService - 사용자 수정 완료:id=ee0a0de3-e2a2-48b9-9a76-b669cbb8d4ae
+25-04-20 16:54:34.532 [http-nio-auto-1-exec-2] DEBUG c.s.m.d.controller.UserApiController - 사용자 수정 응답: com.sprint.mission.discodeit.dto.response.UserDto@442fc664
+25-04-20 16:54:34.571 [http-nio-auto-1-exec-3] INFO  c.s.m.d.controller.UserApiController - 사용자 수정 요청: id=564939a2-0fa5-41c1-9012-d17fc67441f8,request=com.sprint.mission.discodeit.dto.request.UserUpdateRequestDto@3a2515e7
+25-04-20 16:54:34.571 [http-nio-auto-1-exec-3] DEBUG c.s.m.d.s.basic.BasicUserService - 사용자 수정 시작: id=564939a2-0fa5-41c1-9012-d17fc67441f8,request=com.sprint.mission.discodeit.dto.request.UserUpdateRequestDto@3a2515e7
+25-04-20 16:54:34.577 [http-nio-auto-1-exec-3] ERROR c.s.m.d.e.GlobalExceptionHandler - 커스텀 예외 발생: cide=USER_NOT_FOUND,message=해당 사용자를 찾을 수 없습니다.
+25-04-20 16:54:34.629 [http-nio-auto-1-exec-4] INFO  c.s.m.d.controller.UserApiController - 사용자 생성 요청: com.sprint.mission.discodeit.dto.request.UserCreateRequestDto@5d2b0c0c
+25-04-20 16:54:34.630 [http-nio-auto-1-exec-4] DEBUG c.s.m.d.s.basic.BasicUserService - 사용자 생성 시작: com.sprint.mission.discodeit.dto.request.UserCreateRequestDto@5d2b0c0c
+25-04-20 16:54:34.640 [http-nio-auto-1-exec-4] INFO  c.s.m.d.s.basic.BasicUserService - 사용자 생성 완료: id=b582d01c-8a80-4c01-b628-0ae0f4cf9971,username=user
+25-04-20 16:54:34.647 [http-nio-auto-1-exec-4] DEBUG c.s.m.d.controller.UserApiController - 사용자 생성 응답: com.sprint.mission.discodeit.dto.response.UserDto@39168635
+25-04-20 16:54:34.657 [http-nio-auto-1-exec-5] DEBUG c.s.m.d.s.basic.BasicUserService - 사용자 삭제 시작: id=b582d01c-8a80-4c01-b628-0ae0f4cf9971
+25-04-20 16:54:34.672 [http-nio-auto-1-exec-5] INFO  c.s.m.d.s.basic.BasicUserService - 사용자 삭제 완료: id=b582d01c-8a80-4c01-b628-0ae0f4cf9971
+25-04-20 16:54:34.723 [http-nio-auto-1-exec-6] INFO  c.s.m.d.controller.UserApiController - 사용자 생성 요청: com.sprint.mission.discodeit.dto.request.UserCreateRequestDto@5cb6abe9
+25-04-20 16:54:34.724 [http-nio-auto-1-exec-6] DEBUG c.s.m.d.s.basic.BasicUserService - 사용자 생성 시작: com.sprint.mission.discodeit.dto.request.UserCreateRequestDto@5cb6abe9
+25-04-20 16:54:34.738 [http-nio-auto-1-exec-6] INFO  c.s.m.d.s.basic.BasicUserService - 사용자 생성 완료: id=fa364bd1-7289-47b7-b1d0-756cfafa47bb,username=andy
+25-04-20 16:54:34.750 [http-nio-auto-1-exec-6] DEBUG c.s.m.d.controller.UserApiController - 사용자 생성 응답: com.sprint.mission.discodeit.dto.response.UserDto@7dc8b931
+25-04-20 16:54:34.791 [http-nio-auto-1-exec-7] DEBUG c.s.m.d.s.basic.BasicUserService - 사용자 삭제 시작: id=3f95d548-127a-4f55-95b1-c7302d058776
+25-04-20 16:54:34.799 [http-nio-auto-1-exec-7] ERROR c.s.m.d.e.GlobalExceptionHandler - 커스텀 예외 발생: cide=USER_NOT_FOUND,message=해당 사용자를 찾을 수 없습니다.
+25-04-20 16:54:34.891 [http-nio-auto-1-exec-8] INFO  c.s.m.d.controller.UserApiController - 사용자 생성 요청: com.sprint.mission.discodeit.dto.request.UserCreateRequestDto@6b1deb02
+25-04-20 16:54:34.893 [http-nio-auto-1-exec-8] DEBUG c.s.m.d.s.basic.BasicUserService - 사용자 생성 시작: com.sprint.mission.discodeit.dto.request.UserCreateRequestDto@6b1deb02
+25-04-20 16:54:34.906 [http-nio-auto-1-exec-8] INFO  c.s.m.d.s.basic.BasicUserService - 사용자 생성 완료: id=d611ccc3-b7e5-4f14-94bb-b5143c1e8de2,username=user1
+25-04-20 16:54:34.915 [http-nio-auto-1-exec-8] DEBUG c.s.m.d.controller.UserApiController - 사용자 생성 응답: com.sprint.mission.discodeit.dto.response.UserDto@736024d2
+25-04-20 16:54:34.927 [http-nio-auto-1-exec-9] INFO  c.s.m.d.controller.UserApiController - 사용자 생성 요청: com.sprint.mission.discodeit.dto.request.UserCreateRequestDto@779f16e4
+25-04-20 16:54:34.928 [http-nio-auto-1-exec-9] DEBUG c.s.m.d.s.basic.BasicUserService - 사용자 생성 시작: com.sprint.mission.discodeit.dto.request.UserCreateRequestDto@779f16e4
+25-04-20 16:54:34.936 [http-nio-auto-1-exec-9] INFO  c.s.m.d.s.basic.BasicUserService - 사용자 생성 완료: id=6627adc2-0890-4c87-a63e-192686e20586,username=user2
+25-04-20 16:54:34.945 [http-nio-auto-1-exec-9] DEBUG c.s.m.d.controller.UserApiController - 사용자 생성 응답: com.sprint.mission.discodeit.dto.response.UserDto@54c9c65d
+25-04-20 16:54:34.960 [http-nio-auto-1-exec-10] DEBUG c.s.m.d.s.basic.BasicUserService - 모든 사용자 조회 시작
+25-04-20 16:54:34.998 [http-nio-auto-1-exec-10] INFO  c.s.m.d.s.basic.BasicUserService - 모든 사용자 조회 완료: 총 4명
+25-04-20 16:54:35.040 [http-nio-auto-1-exec-1] ERROR c.s.m.d.e.GlobalExceptionHandler - 요청 유효성 검사 실패:Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.sprint.mission.discodeit.dto.response.UserDto> com.sprint.mission.discodeit.controller.UserApiController.createUser(com.sprint.mission.discodeit.dto.request.UserCreateRequestDto,org.springframework.web.multipart.MultipartFile): [Field error in object 'userCreateRequest' on field 'email': rejected value [invalid-email]; codes [Email.userCreateRequest.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateRequest.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@34b4c4b9,.*]; default message [올바른 이메일 형식으로 입력해주세요.]] 
+25-04-20 16:54:41.940 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Starting MessageApiControllerTest using Java 17.0.12 with PID 14145 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-20 16:54:41.941 [Test worker] DEBUG c.s.m.d.c.MessageApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-20 16:54:41.941 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - The following 1 profile is active: "test"
+25-04-20 16:54:43.904 [Test worker] INFO  c.s.m.d.c.MessageApiControllerTest - Started MessageApiControllerTest in 2.584 seconds (process running for 4.081)
+25-04-20 16:54:43.994 [Test worker] INFO  c.s.m.d.c.MessageApiController - 메시지 삭제 요청: id=97147043-77d3-43d8-ae1f-17f0161727dd
+25-04-20 16:54:43.998 [Test worker] DEBUG c.s.m.d.c.MessageApiController - 메시지 삭제 완료
+25-04-20 16:54:44.202 [Test worker] INFO  c.s.m.d.c.MessageApiController - 메시지 수정 요청: id=36fe4051-b8b7-4faa-99af-2f35adde9ff6,request=com.sprint.mission.discodeit.dto.request.MessageUpdateDto@323ebcc6
+25-04-20 16:54:44.203 [Test worker] DEBUG c.s.m.d.c.MessageApiController - 메시지 수정 응답: com.sprint.mission.discodeit.dto.response.MessageDto@12af47f4
+25-04-20 16:54:44.263 [Test worker] INFO  c.s.m.d.c.MessageApiController - 채널별 메시지 목록 조회 요청: channelId=c29650cd-3f40-4171-a227-52c456444af2,page=0
+25-04-20 16:54:44.264 [Test worker] DEBUG c.s.m.d.c.MessageApiController - 채널별 메시지 목록 조회 응답: total=2
+25-04-20 16:54:44.309 [Test worker] INFO  c.s.m.d.c.MessageApiController - 메시지 생성 요청: request=com.sprint.mission.discodeit.dto.request.MessageCreateRequestDto@4b0fdbd7,attachments=0
+25-04-20 16:54:51.327 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Starting UserApiControllerTest using Java 17.0.12 with PID 14156 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-20 16:54:51.328 [Test worker] DEBUG c.s.m.d.c.UserApiControllerTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-20 16:54:51.328 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - The following 1 profile is active: "test"
+25-04-20 16:54:53.630 [Test worker] INFO  c.s.m.d.c.UserApiControllerTest - Started UserApiControllerTest in 2.941 seconds (process running for 4.721)
+25-04-20 16:54:53.990 [Test worker] INFO  c.s.m.d.controller.UserApiController - 사용자 생성 요청: com.sprint.mission.discodeit.dto.request.UserCreateRequestDto@542abb34
+25-04-20 16:54:53.991 [Test worker] DEBUG c.s.m.d.controller.UserApiController - 사용자 생성 응답: com.sprint.mission.discodeit.dto.response.UserDto@740e38e9
+25-04-20 16:54:54.013 [Test worker] ERROR c.s.m.d.e.GlobalExceptionHandler - 요청 유효성 검사 실패:Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.sprint.mission.discodeit.dto.response.UserDto> com.sprint.mission.discodeit.controller.UserApiController.createUser(com.sprint.mission.discodeit.dto.request.UserCreateRequestDto,org.springframework.web.multipart.MultipartFile) with 2 errors: [Field error in object 'userCreateRequest' on field 'username': rejected value [null]; codes [NotBlank.userCreateRequest.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateRequest.username,username]; arguments []; default message [username]]; default message [사용자 이름은 필수입니다.]] [Field error in object 'userCreateRequest' on field 'email': rejected value [invalid-email]; codes [Email.userCreateRequest.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateRequest.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@1e1b4e8b,.*]; default message [올바른 이메일 형식으로 입력해주세요.]] 
+25-04-20 16:54:54.041 [Test worker] INFO  c.s.m.d.controller.UserApiController - 사용자 수정 요청: id=b539064f-dc3a-49c0-bac9-ec18f5c7ffc2,request=com.sprint.mission.discodeit.dto.request.UserUpdateRequestDto@645db77c
+25-04-20 16:54:54.041 [Test worker] DEBUG c.s.m.d.controller.UserApiController - 사용자 수정 응답: com.sprint.mission.discodeit.dto.response.UserDto@60514b5
+25-04-20 18:25:53.775 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Starting UserRepositoryTest using Java 17.0.12 with PID 17770 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-20 18:25:53.776 [Test worker] DEBUG c.s.m.d.r.UserRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-20 18:25:53.776 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - The following 1 profile is active: "test"
+25-04-20 18:25:58.336 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Started UserRepositoryTest in 5.176 seconds (process running for 6.757)
+25-04-20 18:26:05.954 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Starting MessageRepositoryTest using Java 17.0.12 with PID 17814 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-20 18:26:05.955 [Test worker] DEBUG c.s.m.d.r.MessageRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-20 18:26:05.956 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - The following 1 profile is active: "test"
+25-04-20 18:26:10.550 [Test worker] INFO  c.s.m.d.r.MessageRepositoryTest - Started MessageRepositoryTest in 5.205 seconds (process running for 6.674)
+25-04-20 18:26:22.206 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Starting ChannelRepositoryTest using Java 17.0.12 with PID 17860 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-04-20 18:26:22.207 [Test worker] DEBUG c.s.m.d.r.ChannelRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-04-20 18:26:22.207 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - The following 1 profile is active: "test"
+25-04-20 18:26:26.381 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Started ChannelRepositoryTest in 4.752 seconds (process running for 6.09)
