@@ -120,3 +120,48 @@
 25-04-20 18:26:22.207 [Test worker] DEBUG c.s.m.d.r.ChannelRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
 25-04-20 18:26:22.207 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - The following 1 profile is active: "test"
 25-04-20 18:26:26.381 [Test worker] INFO  c.s.m.d.r.ChannelRepositoryTest - Started ChannelRepositoryTest in 4.752 seconds (process running for 6.09)
+25-05-21 11:30:39.739 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 45637 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 11:30:39.740 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 11:30:39.741 [main] INFO  c.s.m.discodeit.DiscodeitApplication - No active profile set, falling back to 1 default profile: "default"
+25-05-21 11:33:47.832 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 45815 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 11:33:47.833 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 11:33:47.833 [main] INFO  c.s.m.discodeit.DiscodeitApplication - No active profile set, falling back to 1 default profile: "default"
+25-05-21 11:39:27.389 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 46042 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 11:39:27.390 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 11:39:27.391 [main] INFO  c.s.m.discodeit.DiscodeitApplication - The following 1 profile is active: "dev"
+25-05-21 13:22:13.694 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 49191 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 13:22:13.695 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 13:22:13.695 [main] INFO  c.s.m.discodeit.DiscodeitApplication - No active profile set, falling back to 1 default profile: "default"
+25-05-21 13:22:37.197 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 49222 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 13:22:37.198 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 13:22:37.198 [main] INFO  c.s.m.discodeit.DiscodeitApplication - The following 1 profile is active: "dev"
+25-05-21 13:27:29.471 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 49352 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 13:27:29.471 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 13:27:29.472 [main] INFO  c.s.m.discodeit.DiscodeitApplication - The following 1 profile is active: "dev"
+25-05-21 13:29:29.311 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 49422 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 13:29:29.311 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 13:29:29.312 [main] INFO  c.s.m.discodeit.DiscodeitApplication - The following 1 profile is active: "dev"
+25-05-21 13:42:40.159 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 50037 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 13:42:40.160 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 13:42:40.160 [main] INFO  c.s.m.discodeit.DiscodeitApplication - The following 1 profile is active: "dev"
+25-05-21 14:24:36.647 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 51909 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 14:24:36.648 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 14:24:36.648 [main] INFO  c.s.m.discodeit.DiscodeitApplication - No active profile set, falling back to 1 default profile: "default"
+25-05-21 14:33:58.537 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 52243 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 14:33:58.537 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 14:33:58.538 [main] INFO  c.s.m.discodeit.DiscodeitApplication - No active profile set, falling back to 1 default profile: "default"
+25-05-21 14:42:49.065 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 52623 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 14:42:49.065 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 14:42:49.066 [main] INFO  c.s.m.discodeit.DiscodeitApplication - The following 1 profile is active: "dev"
+25-05-21 14:46:51.806 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 52798 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 14:46:51.806 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 14:46:51.807 [main] INFO  c.s.m.discodeit.DiscodeitApplication - The following 1 profile is active: "dev"
+25-05-21 14:46:56.551 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Started DiscodeitApplication in 5.16 seconds (process running for 5.817)
+25-05-21 14:49:17.050 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 52883 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 14:49:17.050 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 14:49:17.050 [main] INFO  c.s.m.discodeit.DiscodeitApplication - The following 1 profile is active: "dev"
+25-05-21 15:09:07.758 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Started DiscodeitApplication in 1191.179 seconds (process running for 1192.131)
+25-05-21 15:09:10.991 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Starting DiscodeitApplication using Java 17.0.12 with PID 53559 (/Users/kangsoyul/springstudy/1-sprint-mission/build/classes/java/main started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
+25-05-21 15:09:10.991 [main] DEBUG c.s.m.discodeit.DiscodeitApplication - Running with Spring Boot v3.4.2, Spring v6.2.2
+25-05-21 15:09:10.991 [main] INFO  c.s.m.discodeit.DiscodeitApplication - The following 1 profile is active: "dev"
+25-05-21 15:14:43.760 [main] INFO  c.s.m.discodeit.DiscodeitApplication - Started DiscodeitApplication in 333.188 seconds (process running for 334.011)

@@ -23,6 +23,7 @@ logging:
   level:
     com.sprint.mission.discodeit: info
     org.hibernate.sql: info
+    org.springframework.security: trace
 
 management:
   endpoint:
