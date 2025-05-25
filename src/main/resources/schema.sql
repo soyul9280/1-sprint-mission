@@ -14,7 +14,8 @@ CREATE TABLE IF NOT EXISTS users(
     username VARCHAR(50) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL ,
     password VARCHAR(60) NOT NULL ,
-    profile_id UUID REFERENCES binary_contents(id) ON DELETE SET NULL
+    profile_id UUID REFERENCES binary_contents(id) ON DELETE SET NULL,
+    role VARCHAR(255);
 );
 
 CREATE TABLE IF NOT EXISTS channels(
