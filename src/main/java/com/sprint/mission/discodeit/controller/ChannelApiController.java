@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -36,6 +37,7 @@ public class ChannelApiController implements ChannelApi {
 
 
     @PostMapping("/public")
+    @PreAuthorize("hasRole('CHANNEL_MANAGER')")
     @Override
     public ResponseEntity<ChannelDto> createPublicChannel(@Valid @RequestBody PublicChannelCreateRequestDto publicChannelParam) {
         log.info("공개 채널 생성 요청:{}",publicChannelParam);
@@ -56,6 +58,7 @@ public class ChannelApiController implements ChannelApi {
 
 
     @PatchMapping("{channelId}")
+    @PreAuthorize("hasRole('CHANNEL_MANAGER')")
     @Override
     public ResponseEntity<ChannelDto> updateChannel(@PathVariable("channelId") UUID channelId, @Valid @RequestBody ChannelUpdateRequestDto channelParam) {
         log.info("채널 수정 요청: id={}, request={}", channelId, channelParam);
@@ -66,6 +69,7 @@ public class ChannelApiController implements ChannelApi {
 
 
     @DeleteMapping("{channelId}")
+    @PreAuthorize("hasRole('CHANNEL_MANAGER')")
     @Override
     public ResponseEntity<Void> deleteChannel(@PathVariable("channelId") UUID channelId) {
         log.info("채널 삭제 요청: id={}", channelId);

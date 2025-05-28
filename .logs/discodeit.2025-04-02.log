@@ -1,3 +1,0 @@
-25-04-02 18:57:28.790 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - Starting UserRepositoryTest using Java 17.0.12 with PID 24175 (started by kangsoyul in /Users/kangsoyul/springstudy/1-sprint-mission)
-25-04-02 18:57:28.793 [Test worker] DEBUG c.s.m.d.r.UserRepositoryTest - Running with Spring Boot v3.4.2, Spring v6.2.2
-25-04-02 18:57:28.793 [Test worker] INFO  c.s.m.d.r.UserRepositoryTest - The following 1 profile is active: "test"

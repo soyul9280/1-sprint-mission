@@ -17,6 +17,7 @@ import com.sprint.mission.discodeit.dto.request.UserCreateRequestDto;
 import com.sprint.mission.discodeit.storage.BinaryContentStorage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,6 +30,7 @@ import java.util.UUID;
 @Transactional(readOnly = true)
 public class BasicUserService implements UserService {
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
     private final BinaryContentRepository contentRepository;
     private final BinaryContentStorage binaryContentStorage;
     private final UserMapper userMapper;
@@ -41,7 +43,7 @@ public class BasicUserService implements UserService {
         String userName = userCreateRequest.getUsername();
         String userEmail = userCreateRequest.getEmail();
         validateDuplicateUser(userName, userEmail);
-        String password = userCreateRequest.getPassword();
+        String password = passwordEncoder.encode(userCreateRequest.getPassword());
 
         BinaryContent binaryContent=(binaryContentCreateRequest !=null)?createBinaryContent(binaryContentCreateRequest):null;
         User user = new User(userName, userEmail,password,binaryContent);
