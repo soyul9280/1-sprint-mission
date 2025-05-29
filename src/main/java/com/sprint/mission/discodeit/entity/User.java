@@ -1,5 +1,6 @@
 package com.sprint.mission.discodeit.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.sprint.mission.discodeit.entity.base.BaseUpdatableEntity;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -13,80 +14,58 @@ import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
-import org.hibernate.annotations.JdbcTypeCode;
-import org.hibernate.type.SqlTypes;
-
-import java.util.Objects;
-
+import lombok.Setter;
 
 @Entity
 @Table(name = "users")
 @Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@ToString(of = {"username","email","password"})
-public class User extends BaseUpdatableEntity{
+@NoArgsConstructor(access = AccessLevel.PROTECTED)  // JPA를 위한 기본 생성자
+public class User extends BaseUpdatableEntity {
 
-    @Column(unique = true, nullable = false,length = 50)
-    private String username;
-    @Column(unique = true, nullable = false,length = 100)
-    private String email;
-    @Column(nullable = false,length = 60)
-    private String password;
+  @Column(length = 50, nullable = false, unique = true)
+  private String username;
+  @Column(length = 100, nullable = false, unique = true)
+  private String email;
+  @Column(length = 60, nullable = false)
+  private String password;
+  @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+  @JoinColumn(name = "profile_id", columnDefinition = "uuid")
+  private BinaryContent profile;
+  @JsonManagedReference
+  @Setter(AccessLevel.PROTECTED)
+  @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+  private UserStatus status;
+  @Enumerated(EnumType.STRING)
+  @Column(nullable = false)
+  private Role role;
 
-    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL,orphanRemoval = true)
-    @JoinColumn(name = "profile_id")
-    private BinaryContent profile;
+  public User(String username, String email, String password, BinaryContent profile) {
+    this.username = username;
+    this.email = email;
+    this.password = password;
+    this.profile = profile;
+    this.role = Role.USER;
+  }
 
-    @OneToOne(mappedBy = "user",fetch = FetchType.LAZY,cascade = CascadeType.ALL,orphanRemoval = true)
-    private UserStatus status;
-
-    @Enumerated(EnumType.STRING)
-    @JdbcTypeCode(SqlTypes.NAMED_ENUM)
-    private Role role;
-
-    public User(String username, String email, String password,  BinaryContent profile) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.profile = profile;
-        this.role = Role.ROLE_USER;
+  public void update(String newUsername, String newEmail, String newPassword,
+      BinaryContent newProfile) {
+    if (newUsername != null && !newUsername.equals(this.username)) {
+      this.username = newUsername;
     }
-
-    public void setStatus(UserStatus status) {
-        this.status = status;
+    if (newEmail != null && !newEmail.equals(this.email)) {
+      this.email = newEmail;
     }
-
-    public void updateUser(String newUserName, String newPassword, String newUserEmail, BinaryContent newProfile) {
-        if (newUserName != null && !newUserName.equals(this.username)) {
-            this.username = newUserName;
-        }
-        if (newUserEmail != null && !newUserEmail.equals(this.email)) {
-            this.email = newUserEmail;
-        }
-        if (newPassword != null && !newPassword.equals(this.password)) {
-            this.password = newPassword;
-        }
-        if (newProfile != null) {
-            this.profile = newProfile;
-        }
-        changeUpdatedAt();
-
+    if (newPassword != null && !newPassword.equals(this.password)) {
+      this.password = newPassword;
     }
-
-    public void updateRole(Role newRole) {
-        this.role = newRole;
+    if (newProfile != null) {
+      this.profile = newProfile;
     }
+  }
 
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(username, user.username) && Objects.equals(email, user.email) && Objects.equals(password, user.password) && Objects.equals(profile, user.profile) && Objects.equals(status, user.status) && role == user.role;
+  public void updateRole(Role newRole) {
+    if (this.role != newRole) {
+      this.role = newRole;
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(username, email, password, profile, status, role);
-    }
+  }
 }
