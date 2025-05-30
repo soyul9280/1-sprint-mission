@@ -74,6 +74,17 @@ CREATE TABLE read_statuses
     UNIQUE (user_id, channel_id)
 );
 
+CREATE TABLE jwt_session (
+     id UUID PRIMARY KEY,
+     user_id UUID NOT NULL,
+     access_token VARCHAR(512) NOT NULL UNIQUE,
+     refresh_token VARCHAR(512) NOT NULL UNIQUE,
+     created_at TIMESTAMP NOT NULL,
+     expires_at TIMESTAMP NOT NULL,
+     revoked BOOLEAN NOT NULL DEFAULT FALSE,
+     replaced_by VARCHAR(255)
+);
+
 
 -- 제약 조건
 -- User (1) -> BinaryContent (1)

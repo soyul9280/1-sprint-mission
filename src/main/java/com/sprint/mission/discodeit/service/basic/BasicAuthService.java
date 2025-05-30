@@ -8,6 +8,8 @@ import com.sprint.mission.discodeit.exception.user.UserNotFoundException;
 import com.sprint.mission.discodeit.mapper.UserMapper;
 import com.sprint.mission.discodeit.repository.UserRepository;
 import com.sprint.mission.discodeit.security.DiscodeitUserDetails;
+import com.sprint.mission.discodeit.security.jwt.JwtSession;
+import com.sprint.mission.discodeit.security.jwt.JwtSessionRepository;
 import com.sprint.mission.discodeit.service.AuthService;
 import java.util.List;
 import java.util.UUID;
@@ -35,7 +37,7 @@ public class BasicAuthService implements AuthService {
   private final UserRepository userRepository;
   private final UserMapper userMapper;
   private final PasswordEncoder passwordEncoder;
-  private final SessionRegistry sessionRegistry;
+  private final JwtSessionRepository jwtSessionRepository;
 
   @Transactional
   @Override
@@ -64,16 +66,13 @@ public class BasicAuthService implements AuthService {
         .orElseThrow(() -> UserNotFoundException.withId(userId));
     user.updateRole(request.newRole());
 
-    sessionRegistry.getAllPrincipals().stream()
-        .filter(principal -> ((DiscodeitUserDetails) principal).getUserDto().id().equals(userId))
-        .findFirst()
-        .ifPresent(principal -> {
-              List<SessionInformation> activeSessions = sessionRegistry.getAllSessions(principal,
-                  false);
-              log.debug("Active sessions: {}", activeSessions.size());
-              activeSessions.forEach(SessionInformation::expireNow);
-            }
-        );
+    List<JwtSession> activeSessions = jwtSessionRepository.findByUserIdAndRevokedFalse(userId);
+    log.info("권한 변경된 유저의 활성 세션 수: {}", activeSessions.size());
+
+    activeSessions.forEach(session -> {
+      session.setRevoked(true);
+      jwtSessionRepository.save(session);
+    });
 
     return userMapper.toDto(user);
   }

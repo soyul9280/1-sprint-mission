@@ -4,13 +4,20 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sprint.mission.discodeit.entity.Role;
 import com.sprint.mission.discodeit.security.CustomLogoutFilter;
 import com.sprint.mission.discodeit.security.CustomSessionInformationExpiredStrategy;
+import com.sprint.mission.discodeit.security.DiscodeitUserDetailsService;
 import com.sprint.mission.discodeit.security.JsonUsernamePasswordAuthenticationFilter;
 import com.sprint.mission.discodeit.security.SecurityMatchers;
 import java.util.List;
 import java.util.stream.IntStream;
+
+import com.sprint.mission.discodeit.security.jwt.JwtAuthenticationFilter;
+import com.sprint.mission.discodeit.security.jwt.JwtService;
+import com.sprint.mission.discodeit.security.jwt.JwtSessionRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.actuate.autoconfigure.observation.ObservationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.access.hierarchicalroles.RoleHierarchy;
 import org.springframework.security.access.hierarchicalroles.RoleHierarchyAuthoritiesMapper;
 import org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl;
@@ -22,6 +29,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.session.SessionRegistry;
 import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -34,6 +42,7 @@ import org.springframework.security.web.authentication.session.RegisterSessionAu
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.security.web.session.ConcurrentSessionFilter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Slf4j
 @Configuration
@@ -43,41 +52,32 @@ public class SecurityConfig {
 
   @Bean
   public SecurityFilterChain filterChain(
-      HttpSecurity http,
-      ObjectMapper objectMapper,
-      AuthenticationManager authenticationManager,
-      SessionAuthenticationStrategy sessionAuthenticationStrategy,
-      SessionRegistry sessionRegistry
-  )
+          HttpSecurity http,
+          ObjectMapper objectMapper,
+          JwtService jwtService,
+          DiscodeitUserDetailsService discodeitUserDetailsService,
+          JwtSessionRepository jwtSessionRepository)
       throws Exception {
     http
-        .authorizeHttpRequests(authorize -> authorize
-            .requestMatchers(
-                SecurityMatchers.NON_API,
-                SecurityMatchers.GET_CSRF_TOKEN,
-                SecurityMatchers.SIGN_UP
-            ).permitAll()
-            .anyRequest().hasRole(Role.USER.name())
-        )
-        .csrf(csrf -> csrf.ignoringRequestMatchers(SecurityMatchers.LOGOUT)
-                .csrfTokenRepository(cookieCsrfTokenRepository()))
-        .logout(AbstractHttpConfigurer::disable)
-        .addFilterAt(
-            JsonUsernamePasswordAuthenticationFilter.createDefault(
-                objectMapper,
-                authenticationManager,
-                sessionAuthenticationStrategy
-            ),
-            UsernamePasswordAuthenticationFilter.class
-        )
-        .addFilterAt(
-            CustomLogoutFilter.createDefault(),
-            LogoutFilter.class
-        )
-        .addFilter(new ConcurrentSessionFilter(sessionRegistry,
-            new CustomSessionInformationExpiredStrategy(objectMapper)))
-    ;
-
+            .csrf(csrf -> csrf
+                    .csrfTokenRepository(cookieCsrfTokenRepository()).disable())
+            .sessionManagement(session->
+                    session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+            .addFilterBefore(new JwtAuthenticationFilter(jwtService,objectMapper,discodeitUserDetailsService,jwtSessionRepository), UsernamePasswordAuthenticationFilter.class)
+            .authorizeHttpRequests(authorize -> authorize
+                    .requestMatchers(HttpMethod.POST,"/api/auth/login").permitAll()
+                    .requestMatchers(HttpMethod.GET,"/api/auth/me").permitAll()
+                    .requestMatchers(HttpMethod.POST,"/api/auth/logout").permitAll()
+                    .requestMatchers(HttpMethod.GET,"/api/users/**").permitAll()
+                    .requestMatchers(HttpMethod.GET,"/api/binaryContents/**").permitAll()
+                    .requestMatchers(HttpMethod.GET,"/api/auth/csrf-token").permitAll()
+                    .requestMatchers("/","/index.html","/swagger-ui/**",
+                            "/v3/api-docs/**","/actuator/**","/favicon.ico","/assets/index-*.js",
+                            "/assets/index-*.css","/static/**").permitAll()
+                    .anyRequest().hasRole("USER")
+            )
+            .httpBasic(AbstractHttpConfigurer::disable)
+            .formLogin(AbstractHttpConfigurer::disable);
     return http.build();
   }
 
@@ -147,4 +147,6 @@ public class SecurityConfig {
     repository.setHeaderName("X-XSRF-TOKEN");
     return repository;
   }
+
+
 }
