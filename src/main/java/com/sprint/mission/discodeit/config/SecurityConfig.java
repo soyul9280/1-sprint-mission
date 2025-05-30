@@ -32,6 +32,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.security.web.authentication.logout.LogoutFilter;
 import org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy;
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.security.web.session.ConcurrentSessionFilter;
 
 @Slf4j
@@ -58,7 +59,8 @@ public class SecurityConfig {
             ).permitAll()
             .anyRequest().hasRole(Role.USER.name())
         )
-        .csrf(csrf -> csrf.ignoringRequestMatchers(SecurityMatchers.LOGOUT))
+        .csrf(csrf -> csrf.ignoringRequestMatchers(SecurityMatchers.LOGOUT)
+                .csrfTokenRepository(cookieCsrfTokenRepository()))
         .logout(AbstractHttpConfigurer::disable)
         .addFilterAt(
             JsonUsernamePasswordAuthenticationFilter.createDefault(
@@ -136,5 +138,13 @@ public class SecurityConfig {
       SessionRegistry sessionRegistry) {
     return new RegisterSessionAuthenticationStrategy(
         sessionRegistry);
+  }
+
+  @Bean
+  public CookieCsrfTokenRepository cookieCsrfTokenRepository() {
+    CookieCsrfTokenRepository repository = CookieCsrfTokenRepository.withHttpOnlyFalse(); // ✅ HttpOnly false
+    repository.setCookieName("XSRF-TOKEN");
+    repository.setHeaderName("X-XSRF-TOKEN");
+    return repository;
   }
 }
