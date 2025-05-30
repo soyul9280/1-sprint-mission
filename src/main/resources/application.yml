@@ -70,3 +70,8 @@ springdoc:
   default-produces-media-type: application/json;charset=UTF-8
 
 
+discodeit:
+  admin:
+    username: ${DISCODEIT_ADMIN_USERNAME}
+    email: ${DISCODEIT_ADMIN_EMAIL}
+    password: ${DISCODEIT_ADMIN_PASSWORD}
