@@ -1,25 +1,27 @@
 package com.sprint.mission.discodeit.exception;
 
-import lombok.Getter;
-
 import java.time.Instant;
+import java.util.HashMap;
 import java.util.Map;
 
-@Getter
-public class ErrorResponse {
-    private Instant timestamp;
-    private String code;
-    private String message;
-    private Map<String,Object> details;
-    private String exceptionType;
-    private int status;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
-    public ErrorResponse(String code, String message, Map<String, Object> details, String exceptionType, int status) {
-        this.timestamp = Instant.now();
-        this.code = code;
-        this.message = message;
-        this.details = details;
-        this.exceptionType = exceptionType;
-        this.status = status;
+@Getter
+@RequiredArgsConstructor
+public class ErrorResponse {
+    private final Instant timestamp;
+    private final String code;
+    private final String message;
+    private final Map<String, Object> details;
+    private final String exceptionType;
+    private final int status;
+
+    public ErrorResponse(DiscodeitException exception, int status) {
+        this(Instant.now(), exception.getErrorCode().name(), exception.getMessage(), exception.getDetails(), exception.getClass().getSimpleName(), status);
     }
-}
+
+    public ErrorResponse(Exception exception, int status) {
+        this(Instant.now(), exception.getClass().getSimpleName(), exception.getMessage(), new HashMap<>(), exception.getClass().getSimpleName(), status);
+    }
+} 

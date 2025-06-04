@@ -1,10 +1,11 @@
 package com.sprint.mission.discodeit.service;
 
-import com.sprint.mission.discodeit.dto.request.RoleUpdateReqeust;
-import com.sprint.mission.discodeit.dto.response.UserDto;
-import com.sprint.mission.discodeit.security.CustomUserDetails;
+import com.sprint.mission.discodeit.dto.data.UserDto;
+import com.sprint.mission.discodeit.dto.request.RoleUpdateRequest;
 
 public interface AuthService {
-    UserDto getMe(CustomUserDetails userDetails);
-    UserDto updateRole(RoleUpdateReqeust roleUpdateReqeust);
+
+  UserDto initAdmin();
+
+  UserDto updateRole(RoleUpdateRequest request);
 }
