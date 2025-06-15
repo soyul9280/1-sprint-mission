@@ -8,7 +8,8 @@ CREATE TABLE users
     username   varchar(50) UNIQUE       NOT NULL,
     email      varchar(100) UNIQUE      NOT NULL,
     password   varchar(60)              NOT NULL,
-    profile_id uuid
+    profile_id uuid,
+    role       varchar(100)             NOT NULL
 );
 
 -- BinaryContent
@@ -18,7 +19,8 @@ CREATE TABLE binary_contents
     created_at   timestamp with time zone NOT NULL,
     file_name    varchar(255)             NOT NULL,
     size         bigint                   NOT NULL,
-    content_type varchar(100)             NOT NULL
+    content_type varchar(100)             NOT NULL,
+    upload_status varchar(20)             NOT NULL DEFAULT 'WAITING'
 --     ,bytes        bytea        NOT NULL
 );
 
@@ -71,6 +73,7 @@ CREATE TABLE read_statuses
     user_id      uuid                     NOT NULL,
     channel_id   uuid                     NOT NULL,
     last_read_at timestamp with time zone NOT NULL,
+    notification_enabled   BOOLEAN          NOT NULL DEFAULT TRUE,
     UNIQUE (user_id, channel_id)
 );
 
@@ -79,10 +82,34 @@ CREATE TABLE jwt_session (
      user_id UUID NOT NULL,
      access_token VARCHAR(512) NOT NULL UNIQUE,
      refresh_token VARCHAR(512) NOT NULL UNIQUE,
-     created_at TIMESTAMP NOT NULL,
-     expires_at TIMESTAMP NOT NULL,
+     created_at timestamp with time zone NOT NULL,
+     expires_at timestamp with time zone NOT NULL,
      revoked BOOLEAN NOT NULL DEFAULT FALSE,
      replaced_by VARCHAR(255)
+);
+
+CREATE TABLE async_task_failure
+(
+    id                UUID PRIMARY KEY,
+    request_id        VARCHAR(255)             NOT NULL,
+    task_name        VARCHAR(100)             NOT NULL,
+    binary_content_id UUID NULL,
+    failure_reason     TEXT NULL,
+    retry_count       INT NULL,
+    created_at        TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at        TIMESTAMP WITH TIME ZONE
+);
+
+CREATE TABLE notification
+(
+    id                UUID PRIMARY KEY,
+    receiver_id       UUID NOT NULL,
+    type              VARCHAR(50)             NOT NULL,
+    target_id         UUID,
+    title             VARCHAR(255),
+    content           TEXT,
+    created_at        TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at        TIMESTAMP WITH TIME ZONE
 );
 
 

@@ -22,14 +22,25 @@ public enum ErrorCode {
     // ReadStatus 관련 에러 코드
     READ_STATUS_NOT_FOUND("읽음 상태를 찾을 수 없습니다."),
     DUPLICATE_READ_STATUS("이미 존재하는 읽음 상태입니다."),
-    
+    // 인증/인가 에러 코드
+    INVALID_TOKEN_SECRET("유효하지 않은 시크릿입니다."),
+    INVALID_TOKEN("유효하지 않은 토큰입니다."),
+    TOKEN_NOT_FOUND("토큰을 찾을 수 없습니다."),
+
     // UserStatus 관련 에러 코드
     USER_STATUS_NOT_FOUND("사용자 상태를 찾을 수 없습니다."),
     DUPLICATE_USER_STATUS("이미 존재하는 사용자 상태입니다."),
     
     // Server 에러 코드
     INTERNAL_SERVER_ERROR("서버 내부 오류가 발생했습니다."),
-    INVALID_REQUEST("잘못된 요청입니다.");
+    INVALID_REQUEST("잘못된 요청입니다."),
+
+    //notification 에러코드
+    NOTIFICATION_NOT_FOUND("알림을 찾을 수 없습니다."),
+    INVALID_NOTIFICATION_TYPE("알림 타입이 지정되지 않았습니다."),
+    UNSUPPORTED_NOTIFICATION_TYPE("원하지 않는 알림 타입입니다.");
+
+
 
     private final String message;
 
