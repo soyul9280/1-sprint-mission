@@ -2,8 +2,10 @@ package com.sprint.mission.discodeit.repository;
 
 import com.sprint.mission.discodeit.entity.ReadStatus;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -22,4 +24,11 @@ public interface ReadStatusRepository extends JpaRepository<ReadStatus, UUID> {
   Boolean existsByUserIdAndChannelId(UUID userId, UUID channelId);
 
   void deleteAllByChannelId(UUID channelId);
+
+  Optional<ReadStatus> findByUserIdAndChannelId(UUID userId, UUID channelId);
+  List<ReadStatus> findByChannelIdAndNotificationEnabledTrue(UUID channelId);
+
+  @Modifying
+  @Query("UPDATE ReadStatus  rs SET rs.notificationEnabled=:enabled WHERE rs.user.id=:userId AND rs.channel.id=:channelId")
+  int updateNotificationEnabled(@Param("userId") UUID userId,@Param("channelId") UUID channelId,@Param("enabled") Boolean enabled);
 }

@@ -8,6 +8,7 @@ import com.sprint.mission.discodeit.exception.user.UserNotFoundException;
 import com.sprint.mission.discodeit.mapper.UserMapper;
 import com.sprint.mission.discodeit.repository.UserRepository;
 import com.sprint.mission.discodeit.security.DiscodeitUserDetails;
+import com.sprint.mission.discodeit.security.jwt.JwtService;
 import com.sprint.mission.discodeit.security.jwt.JwtSession;
 import com.sprint.mission.discodeit.security.jwt.JwtSessionRepository;
 import com.sprint.mission.discodeit.service.AuthService;
@@ -37,7 +38,7 @@ public class BasicAuthService implements AuthService {
   private final UserRepository userRepository;
   private final UserMapper userMapper;
   private final PasswordEncoder passwordEncoder;
-  private final JwtSessionRepository jwtSessionRepository;
+  private final JwtService jwtService;
 
   @Transactional
   @Override
@@ -63,17 +64,10 @@ public class BasicAuthService implements AuthService {
   public UserDto updateRole(RoleUpdateRequest request) {
     UUID userId = request.userId();
     User user = userRepository.findById(userId)
-        .orElseThrow(() -> UserNotFoundException.withId(userId));
+            .orElseThrow(() -> UserNotFoundException.withId(userId));
     user.updateRole(request.newRole());
 
-    List<JwtSession> activeSessions = jwtSessionRepository.findByUserIdAndRevokedFalse(userId);
-    log.info("권한 변경된 유저의 활성 세션 수: {}", activeSessions.size());
-
-    activeSessions.forEach(session -> {
-      session.setRevoked(true);
-      jwtSessionRepository.save(session);
-    });
-
+    jwtService.invalidateJwtSession(user.getId());
     return userMapper.toDto(user);
   }
 }

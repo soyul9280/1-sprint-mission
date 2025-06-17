@@ -8,6 +8,7 @@ import com.sprint.mission.discodeit.dto.response.PageResponse;
 import com.sprint.mission.discodeit.entity.BinaryContent;
 import com.sprint.mission.discodeit.entity.Channel;
 import com.sprint.mission.discodeit.entity.Message;
+import com.sprint.mission.discodeit.entity.UploadStatus;
 import com.sprint.mission.discodeit.entity.User;
 import com.sprint.mission.discodeit.exception.channel.ChannelNotFoundException;
 import com.sprint.mission.discodeit.exception.message.MessageNotFoundException;
@@ -18,6 +19,8 @@ import com.sprint.mission.discodeit.repository.BinaryContentRepository;
 import com.sprint.mission.discodeit.repository.ChannelRepository;
 import com.sprint.mission.discodeit.repository.MessageRepository;
 import com.sprint.mission.discodeit.repository.UserRepository;
+import com.sprint.mission.discodeit.service.AsyncBinaryContentService;
+import com.sprint.mission.discodeit.service.BinaryContentService;
 import com.sprint.mission.discodeit.service.MessageService;
 import com.sprint.mission.discodeit.storage.BinaryContentStorage;
 import java.time.Instant;
@@ -30,6 +33,8 @@ import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.transaction.support.TransactionSynchronization;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 @Slf4j
 @Service
@@ -43,6 +48,8 @@ public class BasicMessageService implements MessageService {
   private final BinaryContentStorage binaryContentStorage;
   private final BinaryContentRepository binaryContentRepository;
   private final PageResponseMapper pageResponseMapper;
+  private final BinaryContentService binaryContentService;
+  private final AsyncBinaryContentService asyncBinaryContentService;
 
   @Transactional
   @Override
@@ -65,12 +72,12 @@ public class BasicMessageService implements MessageService {
 
           BinaryContent binaryContent = new BinaryContent(fileName, (long) bytes.length,
               contentType);
+          binaryContent.setUploadStatus(UploadStatus.WAITING);
           binaryContentRepository.save(binaryContent);
           binaryContentStorage.put(binaryContent.getId(), bytes);
           return binaryContent;
         })
         .toList();
-
     String content = messageCreateRequest.content();
     Message message = new Message(
         content,
@@ -80,6 +87,22 @@ public class BasicMessageService implements MessageService {
     );
 
     messageRepository.save(message);
+    final List<BinaryContent> finalAttachments = attachments;
+    TransactionSynchronizationManager.registerSynchronization(
+            new TransactionSynchronization() {
+              @Override
+              public void afterCommit() {
+                for (int i = 0; i < finalAttachments.size(); i++) {
+                  BinaryContent binaryContent = finalAttachments.get(i);
+                  BinaryContentCreateRequest request = binaryContentCreateRequests.get(i);
+                  asyncBinaryContentService.uploadFileAsync(binaryContent.getId(),request.bytes()).exceptionally(ex->{
+                    return null;
+                  });
+                }
+              }
+            }
+    );
+
     log.info("메시지 생성 완료: id={}, channelId={}", message.getId(), channelId);
     return messageMapper.toDto(message);
   }
@@ -132,4 +155,6 @@ public class BasicMessageService implements MessageService {
     messageRepository.deleteById(messageId);
     log.info("메시지 삭제 완료: id={}", messageId);
   }
+
+
 }
